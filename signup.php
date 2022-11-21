@@ -50,17 +50,25 @@
                 
                 <!--Country-->
                 <div>
-                    <label for="country">Country</label>
+                    <label for="country">Region</label>
                     <select name="country" id="country" class="form-control">
-                        <option value="">Select Your Country</option>
-                        <option value="philippines">Philippines</option>
-                        <option value="japan">Japan</option>
-                        <option value="korea">Korea</option>
-                        <option value="usa">United States</option>
-                        <option value="china">China</option>
-                        <option value="russia">Russia</option>
-                        <option value="france">France</option>
-                        <option value="germany">Germany</option>
+                        <option value="" disabled selected hidden>Select Your Region</option>
+                        <option value="car">CORDILLERA ADMINISTRATIVE REGION</option>
+                        <option value="ilocos region">ILOCOS REGION</option> 
+                        <option value="cagayan valley">CAGAYAN VALLEY</option>
+                        <option value="central luzon">CENTRAL LUZON</option>
+                        <option value="calabarzon">CALABARZON</option>
+                        <option value="ncr">NATIONAL CAPITAL REGION</option>
+                        <option value="mimaropa">MIMAROPA</option>
+                        <option value="bicol region">BICOL REGION</option>
+                        <option value="western visayas">WESTERN VISAYAS</option>
+                        <option value="central visayas">CENTRAL VISAYAS</option>
+                        <option value="eastern visayas">EASTERN VISAYAS</option>
+                        <option value="zamboanga peninsula">ZAMBOANGA PENINSULA</option>
+                        <option value="northern mindanao">NORTHERN MINDANAO</option>
+                        <option value="davao region">DAVAO REGION</option>
+                        <option value="soccksargen">SOCCSKSARGEN</option>
+                        <option value="caraga region">CARAGA REGION</option>
                     </select>
                     <span id="countryerr"></span>
                 </div>
@@ -76,7 +84,7 @@
                     <span id="cityerr"></span>
                 </div>
                 <div>
-                    <label for="state">State / Province</label>
+                    <label for="state">Province</label>
                     <input type="text" name="state" id="state" class="form-control">
                     <span id="staterr"></span>
                 </div>
@@ -100,8 +108,7 @@
 
         <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-        <script src="registration.js">
-            
+        <script src="registration1.js">
             
         </script>
     </body>
