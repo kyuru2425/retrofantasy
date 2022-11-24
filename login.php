@@ -11,20 +11,18 @@ rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxj
 
 </head>
 <body>
-<form action="login-action.php" method="post" id="formLogin"
-			onSubmit="return validate();">
+<form action="login_action.php" method="post" id="formLogin">
 			<div class="login-form-container">
 
 				<div class="form-head">Login Page</div>
 
                 <div class="field-column">
 					<div>
-						<label for="username">Username</label><span id="user_info"
-							class="error-info"></span>
+						<label for="email">Email</label>
+						<span id="user_info" class="error-info"></span>
 					</div>
 					<div>
-						<input name="user_name" id="user_name" type="text"
-							class="demo-input-box" placeholder="Enter Username or Email">
+						<input name="email" id="email" type="email" class="demo-input-box" placeholder="Enter Email">
 					</div>
 				</div>
 				<div class="field-column">
@@ -47,13 +45,13 @@ rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxj
 				</div>
 				<div class="login-row form-nav-row">
 					<p>New user?</p>
-					<a href="#" class="btn form-link">Signup Now</a>
+					<a href="/signup.php" class="btn form-link">Signup Now</a>
 				</div>
-				<div class="login-row form-nav-row">
+				<!-- <div class="login-row form-nav-row">
 					<p>May also signup with</p>
 					<a href="#"><i class="bi bi-twitter"></i></a>
                     <a href="#"><i class="bi bi-linkedin"></i>
-				</div>
+				</div> -->
 			</div>
 		</form>
 

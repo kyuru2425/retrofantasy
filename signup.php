@@ -17,12 +17,12 @@
                 <!--Names-->
                 <div class="row">
                     <div class="col-6">
-                        <label for="fname">First Name</label>
-                        <input type="text" name="fname" id="fname" class="form-control">
+                        <label for="first_name">First Name</label>
+                        <input type="text" name="first_name" id="first_name" class="form-control">
                     </div>
                     <div class="col-6">
-                        <label for="lname">Last Name</label>
-                        <input type="text" name="lname" id="lname" class="form-control">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" name="last_name" id="last_name" class="form-control">
                     </div>
                     <span id="fnamerr"></span>
                 </div>
