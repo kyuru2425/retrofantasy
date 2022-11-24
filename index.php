@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="home.css" />
   </head>
   <body>
-    <header class="header">
+    <!-- <header class="header">
       <nav class="nav-main">
         <div class="logo">
           <img
@@ -22,7 +22,7 @@
         </div>
         <ul class="nav-tabs">
           <li><a href="#">HOME</a></li>
-          <li><a href="#">SHOP</a></li>
+          <li><a href="/shop.html">SHOP</a></li>
           <li><a href="#">ABOUT US</a></li>
           <li><a href="#">CONTACT US</a></li>
           <li><a href="#">ACCOUNT</a></li>
@@ -32,8 +32,8 @@
             <a href="#"><i class="bi bi-search"></i></a>
           </li>
           <li><a href="#">CART</a></li>
-          <li><a href="#">LOG-IN</a></li>
-          <li><a href="#">SIGN-UP</a></li>
+          <li><a href="/login.php">LOG-IN</a></li>
+          <li><a href="/signup.php">SIGN-UP</a></li>
         </ul>
       </nav>
     </header>
@@ -42,7 +42,8 @@
         <input type="text" name="search" id="search" />
         <input class="search-submit" type="submit" value="Search" />
       </form>
-    </div>
+    </div> -->
+    <?php include "header.php"; ?>
 
     <div class="landing-page">
       <h1>PRESS START</h1>
@@ -67,12 +68,12 @@
       </div>
     </div>
 
-    <footer>
+    <!-- <footer>
       <div class="footer-container">
         <div class="quick-links">
           <ul>
             <h3>Quick Links</h3>
-            <li><a href="#">Home</a></li>
+            <li><a href="/home.php">Home</a></li>
             <li><a href="#">Shop</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact Us</a></li>
@@ -108,7 +109,8 @@
       <div class="copyright">
         Copyright <i class="bi bi-c-circle"></i> Retro Fantasy
       </div>
-    </footer>
+    </footer> -->
+    <?php include "footer.php"; ?>
     <script src="home.js"></script>
   </body>
 </html>
