@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Orbitron", sans-serif;
+  color: white;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+}
+.header {
+  background-color: black;
+  /* background-color: #36454f; */
+  height: 10vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0%;
+  margin: 0 5vw;
+}
+.nav-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  background-color: black;
+  /* border-radius: 0 0 10px 10px; */
+}
+.nav-main a {
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-main a:hover {
+  /* text-decoration: underline; */
+  text-underline-offset: 10px;
+  /* text-decoration-color: yellow; */
+  border-bottom: 4px solid #425050;
+}
+
+.logo > img {
+  width: 250px;
+  /* background-color: #232b2b; */
+  max-height: 10vh;
+  padding: 10px;
+  cursor: pointer;
+}
+.nav-tabs,
+.nav-tabs-sub {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  list-style: none;
+}
+.nav-tabs > li,
+.nav-tabs-sub > li {
+  display: flex;
+  align-items: center;
+}
+.search-form-container {
+  display: none;
+  z-index: 999;
+}
+.search-form {
+  display: flex;
+  justify-content: center;
+
+  gap: 5px;
+}
+.search-form > input {
+  height: 5vh;
+  padding: 5px;
+}
+.search-submit {
+  cursor: pointer;
+  background-color: #425050;
+  color: white;
+}
+#search {
+  width: 40%;
+  color: black;
+}
+/*//////////////////////////////LANDING PAGE//////////////////////////////////*/
+.landing-page {
+  /* background-color: rgb(39, 39, 39); */
+  background: radial-gradient(rgb(39, 39, 39), black 70%);
+  background-size: cover;
+  height: 90vh;
+  margin: 0% 5%;
+  border-radius: 25px;
+  padding: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopNowButton {
+  background-color: #425050;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px black;
+}
+.console-cards {
+  display: flex;
+  margin: 5vh 10vw;
+  justify-content: space-between;
+}
+.console-card {
+  background-color: black;
+  width: 15vw;
+  height: 30vh;
+  border-radius: 25px;
+  display: flex;
+  padding: 1vh;
+  justify-content: center;
+  box-shadow: 0 0 10px white;
+}
+.console-card > img {
+  max-width: 200px;
+  height: 50px;
+}
+
+/*////////////////////////////////////SHOP PAGE//////////////////////////////////////////*/
+.brands {
+  background-color: black;
+  /* background-color: #36454f; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 10vh;
+}
+.brands-tabs {
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  width: 70%;
+}
+.brands-tabs > li {
+  width: 150px;
+
+  height: 100%;
+}
+.brands-tabs > li > div {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brands-tabs > li > div:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  background-color: #425050;
+}
+.nintendo-list,
+.sega-list,
+.playstation-list,
+.xbox-list {
+  position: absolute;
+  top: 100%;
+  box-sizing: border-box;
+  background-color: #425050;
+  border-top: 5px solid black;
+}
+.nintendo-list > li,
+.sega-list > li,
+.playstation-list > li,
+.xbox-list > li {
+  padding: 10px 10px;
+  width: 150px;
+  box-sizing: border-box;
+  text-align: left;
+  cursor: pointer;
+  list-style: none;
+}
+.nintendo-list > li:hover,
+.sega-list > li:hover,
+.playstation-list > li:hover,
+.xbox-list > li:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  background-color: white;
+  color: black;
+}
+
+.nintendo-list {
+  display: none;
+}
+.sega-list {
+  display: none;
+}
+.playstation-list {
+  display: none;
+}
+.xbox-list {
+  display: none;
+}
+.console-container {
+  display: none;
+  position: sticky;
+  top: 18vh;
+  z-index: -999;
+}
+.console {
+  /* background-color: #425050; */
+  /* background-color: #36454f; */
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 18vh;
+  z-index: -999;
+}
+
+.console-tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 2rem;
+  list-style: none;
+  width: 90%;
+  text-align: center;
+}
+.shop-list {
+  margin: 1vh 10vw;
+  display: grid;
+  gap: 10px;
+  background-color: #18181851;
+  width: 80vw;
+  padding: 5vh;
+  grid-template-columns: repeat(auto-fill, 15vw);
+  justify-content: center;
+}
+.shop-cards {
+  width: 15vw;
+  min-width: 200px;
+  background-color: aliceblue;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 5px 5px 10px gray;
+}
+.shop-cards > p {
+  color: black;
+  text-align: center;
+}
+.shop-cards > img {
+  width: 100%;
+}
+/*/////////////////////////////////FOOTER/////////////////////////////////////*/
+footer {
+  border-top: 1px solid white;
+  margin-top: 10vh;
+}
+.footer-container {
+  margin: 2vh 5vw;
+  display: flex;
+  justify-content: space-between;
+}
+.quick-links li {
+  list-style: none;
+  margin: 10px;
+}
+.brands-footer {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  margin: 20px;
+  padding: 20px;
+}
+.brands-footer > img {
+  max-width: 200px;
+  height: 50px;
+}
+.social-media-footer > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+  margin: 20px 0px;
+}
+.social-media-footer > ul > li {
+  transform: scale(2);
+}
+.copyright {
+  display: flex;
+  justify-content: center;
+}
