@@ -1,6 +1,6 @@
 function checkValidation(){
-    let fname = document.regform.fname.value;
-    let lname = document.getElementById("lname").value;
+    let fname = document.regform.first_name.value;
+    let lname = document.getElementById("last_name").value;
     let uemail = document.getElementById("email").value;
     let pass = document.getElementById("password").value;
     let cpass = document.getElementById("con_password").value;
@@ -30,7 +30,7 @@ function checkValidation(){
     let ret = 0;
     
     function checkname(name){
-        let nameVal = name;
+        let nameVal = name.trim();
         
         let x =0;
         if(isEmpty(nameVal)){
