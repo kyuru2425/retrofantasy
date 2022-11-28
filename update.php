@@ -15,10 +15,55 @@
         $type = $_POST['type'];
         $price = $_POST['price'];
         $qty=$_POST['inventory'];
+        $target_file = $_POST['hidden'];  
+        if(empty($target_file)){
+            $dir="ProductImages/";
+            $target_file = $dir.basename($_FILES['imageup']['name']);
+            $uploadOk = 1;
+            $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+            $check = getimagesize($_FILES["imageup"]["tmp_name"]);
+            if($check !== false) {
+                echo "File is an image - " . $check["mime"] . ".";
+                $uploadOk = 1;
+            } else {
+                echo "File is not an image.";
+                $uploadOk = 0;
+            }
+            // Check if file already exists
+            if (file_exists($target_file)) {
+                echo "Sorry, file already exists.";
+                $uploadOk = 0;
+            }
+            // Check file size
+            if ($_FILES["imageup"]["size"] > 2500000) {
+                echo "Sorry, your file is too large.";
+                $uploadOk = 0;
+            }
+            // Allow certain file formats
+            if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+            && $imageFileType != "gif" ) {
+            echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+            $uploadOk = 0;
+            }
+            // Check if $uploadOk is set to 0 by an error
+            if ($uploadOk == 0) {
+                echo "Sorry, your file was not uploaded.";
+            // if everything is ok, try to upload file
+            } else {
+                if (move_uploaded_file($_FILES["imageup"]["tmp_name"], $target_file)) {
+                echo "The file ". htmlspecialchars( basename( $_FILES["imageup"]["name"])). " has been uploaded.";
+                } else {
+                echo "Sorry, there was an error uploading your file.";
+                }
+            }
+            // $sql5 = "UPDATE products p INNER JOIN inventory i ON p.product_id = i.product_id SET p.product_name='$prodname', p.product_console_id='$console', p.product_type_id='$type', p.price='$price', i.quantity='$qty',
+            //         p.image='$target_file' WHERE p.product_id='$prodid'";
+        }
+        
         
         $sql5 = "UPDATE products p INNER JOIN inventory i ON p.product_id = i.product_id SET p.product_name='$prodname', p.product_console_id='$console', p.product_type_id='$type', p.price='$price', i.quantity='$qty'
-                    WHERE p.product_id='$prodid'";
-
+                ,p.image='$target_file' WHERE p.product_id='$prodid'";
+        //echo $sql5;
         $result5 =mysqli_query($connection,$sql5);
 
         
@@ -39,7 +84,7 @@
     <body>
         <div class="container">
             <h2>Edit Product</h2>
-            <form action="update.php" method="post">
+            <form action="update.php" method="post" enctype="multipart/form-data">
                 <input type='hidden' name='prodid' value="<?php echo $row4['product_id'] ?>">
                 <div class="form-group">
                     <label for="prodname">Product Name</label>
@@ -85,11 +130,9 @@
                 </div>
                 <br>
                 <div class="form-group">
-                    <label for="active">Discount Active?</label>
-                    <select name="active" id="active">
-                        <option value="0">Inactive</option>
-                        <option value="1">Active</option>
-                    </select>
+                    <label for="image">Upload Image</label>
+                    <input type="file" name="imageup" id="imageup" class="form-control">
+                    <input type='hidden' name='hidden' value="<?php echo $row4['image'] ?>">
                 </div>
                 <br>
                 <div class="form-group">

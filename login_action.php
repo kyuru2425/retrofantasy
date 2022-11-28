@@ -25,7 +25,7 @@
             
 
             if($count >0 && password_verify($pass, $hashpass)){
-                echo "<script>window.location.href='temp.php'</script>";
+                echo "<script>window.location.href='index.php'</script>";
             }else{
                 echo "<script>alert('User not Found')</script>";
                 echo "<script>window.location.href='login.php'</script>";
