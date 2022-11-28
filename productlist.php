@@ -20,7 +20,7 @@
         <?php include "header.php" ?>
         <div class="container">
             <div>
-                <form action="/productformcreate.php" method="post">
+                <form action="/productformcreate.php" method="post" enctype="multipart/form-data">
                     <input type="text" name="prodname" id="prodname" placeholder="Product Name" class="form-control" required><br>
                     <select name="console" id="console" class="form-control" required>
                         <option value="" selected disabled hidden>Select Console Type</option>
@@ -44,6 +44,8 @@
                     </select><br>
                     <input type="number" name="price" id="price" class="form-control" placeholder="Product Price" required>
                     <br>    
+                    <input type="file" name="image" id="image" class="form-control" required>
+                    <br>
                     <input type="submit" name="addprod" id="addprod" class="btn btn-primary">
                 </form>
             </div>
@@ -54,6 +56,7 @@
                         <tr>
                             <td>ID</td>
                             <td>Product Name</td>
+                            <td>Product Image</td>
                             <td>Console Type</td>
                             <td>Product Type</td>
                             <td>Price</td>
@@ -67,6 +70,7 @@
                                 <tr>
                                     <td><?php echo $row3['product_id'] ?></td>
                                     <td><?php echo $row3['product_name'] ?></td>
+                                    <td><img src="<?php echo $row3['image'] ?>" alt="" style="width:50px;height:50px;"></td>
                                     <td><?php echo $row3['console_name'] ?></td>
                                     <td><?php echo $row3['type_name'] ?></td>
                                     <td><?php echo $row3['price'] ?></td>
@@ -90,6 +94,7 @@
                                 <tr>
                                     <td><?php echo $row3['product_id'] ?></td>
                                     <td><?php echo $row3['product_name'] ?></td>
+                                    <td><img src="<?php echo $row3['image'] ?>" alt="" style="width:50px;height:50px;"></td>
                                     <td><?php echo $row3['console_name'] ?></td>
                                     <td><?php echo $row3['type_name'] ?></td>
                                     <td><?php echo $row3['price'] ?></td>
