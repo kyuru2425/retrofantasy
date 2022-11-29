@@ -1,3 +1,7 @@
+<?php
+     require "retrieveShop.php"; 
+?> 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,20 +17,22 @@
   </head>
   <body>
     <?php include "header.php" ?>
-
+    
     <div class="brands">
       <ul class="brands-tabs">
         <li id="nintendo">
           <div>NINTENDO</div>
           <ul class="nintendo-list" id="nintendo-list">
-            <li id="nintendo64">Nintendo 64</li>
-            <li id="gamecube">GameCube</li>
-            <li id="nintendoNes">Nintendo NES</li>
-            <li id="superNintendo">Super Nintendo</li>
-            <li id="wii">Wii</li>
-            <li id="wiiU">Wii U</li>
-            <li id="gameboy">GameBoy</li>
-            <li id="gameboyAdvance">GameBoy Advance</li>
+          
+                
+            <li id="nintendo64"><a href="?where=console_name='Nintendo 64'">Nintendo 64</a></li>
+            <li id="gamecube"><a  href="?where=console_name='GameCube'">GameCube </a></li>
+            <li id="nintendoNes"><a  href="?where=console_name='Nintendo NES'">Nintendo NES</a></li>
+            <li id="superNintendo"><a  href="?where=console_name='Super Nintendo'">Super Nintendo</a></li>
+            <li id="wii"><a href="?where=console_name='Wii'">Wii</a></li>
+            <li id="wiiU"><a href="?where=console_name='Wii U'">Wii U</a></li>
+            <li id="gameboy"><a href="?where=console_name='Gameboy'">GameBoy</a></li>
+            <li id="gameboyAdvance"><a href="?where=console_name='Gameboy Advanced'">GameBoy Advance</a></li>
             <li id="ds">DS</li>
             <li id="3ds">3DS</li>
           </ul>
@@ -66,95 +72,85 @@
       <div class="console" id="console">
         <ul class="console-tabs">
           <li>
-            <p class="console-name"></p>
+          <a href="?where=<?php echo $where ?>&type=product_type_id=1">
+            <p class="console-name"><?php echo $where ?></p>
             <p>System</p>
+          </a>
           </li>
           <li>
-            <p class="console-name"></p>
-            Games
+          <a href="?where=<?php echo $where ?>&type=product_type_id=2">
+            <p class="console-name"><?php echo $where ?></p>
+            <p>Games</p> 
+          </a>
           </li>
           <li>
-            <p class="console-name"></p>
-            Accesories
+          <a href="?where=<?php echo $where ?>&type=product_type_id=3">
+            <p class="console-name"><?php echo $where ?></p>
+            <p>Accesories</p>
+          </a> 
           </li>
         </ul>
       </div>
     </div>
+<!--////////////////////////////////////items displayed///////////////////////////////////////////////////-->   
 
-    <div class="shop-list">
-      <div class="shop-cards">
-        <img src="./images/mario-kart-64.jfif" />
-        <p>Mario kart 64</p>
-        <p>500.00php</p>
-        <span style="color: black; font-size: small">|Nintendo 64</span>
-        <span style="color: black; font-size: small">|Nintendo Game</span>
-      </div>
-      <div class="shop-cards">
-        <img src="./images/super-mario-64.jpg" />
-        <p>Super MArio 64</p>
-        <p>500.00php</p>
-        <span style="color: black; font-size: small">|Nintendo 64</span>
-        <span style="color: black; font-size: small">|Nintendo Game</span>
-      </div>
-      <div class="shop-cards">
-        <img src="./images/donkey-kong-64.jpg" />
-        <p>Donkey Kong 64</p>
-        <p>500.00php</p>
-        <span style="color: black; font-size: small">|Nintendo 64</span>
-        <span style="color: black; font-size: small">|Nintendo Game</span>
-      </div>
-      <div class="shop-cards">
-        <img src="./images/pokemon-stadium.webp" />
-        <p>Pokemon Stadium</p>
-        <p>500.00php</p>
-        <span style="color: black; font-size: small">|Nintendo 64</span>
-        <span style="color: black; font-size: small">|Nintendo Game</span>
-      </div>
-      <div class="shop-cards">
-        <img src="./images/Yoshis-Story.jpg" />
-        <p>Yoshi's Story</p>
-        <p>500.00php</p>
-        <span style="color: black; font-size: small">|Nintendo 64</span>
-        <span style="color: black; font-size: small">|Nintendo Game</span>
-      </div>
-      <div class="shop-cards">
-        <img src="./images/mario-kart-64.jfif" />
-        <p>Mario kart 64</p>
-        <p>500.00php</p>
-        <span style="color: black; font-size: small">|Nintendo 64</span>
-        <span style="color: black; font-size: small">|Nintendo Game</span>
-      </div>
-      <div class="shop-cards">
-        <img src="./images/super-mario-64.jpg" />
-        <p>Super MArio 64</p>
-        <p>500.00php</p>
-        <span style="color: black; font-size: small">|Nintendo 64</span>
-        <span style="color: black; font-size: small">|Nintendo Game</span>
-      </div>
-      <div class="shop-cards">
-        <img src="./images/donkey-kong-64.jpg" />
-        <p>Donkey Kong 64</p>
-        <p>500.00php</p>
-        <span style="color: black; font-size: small">|Nintendo 64</span>
-        <span style="color: black; font-size: small">|Nintendo Game</span>
-      </div>
-      <div class="shop-cards">
-        <img src="./images/pokemon-stadium.webp" />
-        <p>Pokemon Stadium</p>
-        <p>500.00php</p>
-        <span style="color: black; font-size: small">|Nintendo 64</span>
-        <span style="color: black; font-size: small">|Nintendo Game</span>
-      </div>
-      <div class="shop-cards">
-        <img src="./images/Yoshis-Story.jpg" />
-        <p>Yoshi's Story</p>
-        <p>500.00php</p>
-        <span style="color: black; font-size: small">|Nintendo 64</span>
-        <span style="color: black; font-size: small">|Nintendo Game</span>
-      </div>
-    </div>
+<div class="shop-list">
+    
+    <?php
+    
+      while($row = mysqli_fetch_array($result)){?>
+      
+                 <div class="shop-cards" style="height:30vh">
 
+                <div style="width:100%;height: 70%; background-color:gray;display:flex;justify-content:center ">
+                  <img src="./ProductImages/Nintendo/Game_Images/3DS/mariokart7.jpg" style='height:100%'>
+                </div>
+                  <p><?php echo $row['product_id']; ?></p> 
+                  <p><?php echo $row['product_name']; ?></p>
+                  <p>&#8369; <?php echo $row['price']; ?>.00</p>
+                  <!--  name='edit' >View</button> -->
+                  <form  action="viewItem.php" method='POST'>
+                 <button class="view" value="view"  type='submit' name="view"  >View</button>
+                 
+                 <input type="hidden" name='product_name' 
+                            value= '<?php echo $row['product_name']; ?>'>
+                  </form> 
+                 </div>
+         
+         <?php } ?>
+        
+      </div>
+      
+     
+      
+ <!--//////////////////////Pagination///////////////////////////////////-->        
+         <div style="display:flex; justify-content:center">
+       <a class="page"style="color:white; text-decoration:none;border:1px solid white;margin:2px;padding:2px;width:27px;text-align:center;display:<?php echo ($page<=1)?'none':'inline-block';?> " href="shop.php?page=<?php echo $previous_page ?>"><< </a>
+
+        <?php
+        $bcolor = '';
+        $textcolor = '';
+       
+
+        for ($i = 1; $i <= $total_pages;$i++){
+          if ($page == $i){
+            $color= 'background-color:bisque';
+            $textcolor="black";
+          }else{
+            $color = '';
+            $textcolor="white";
+          }
+          echo '<a class="page" style="color:'.$textcolor.'; text-decoration:none;border:1px solid white;margin:2px;padding:2px;width:27px;text-align:center;'.$color.'" href="shop.php?page='.$i.'">' .$i .'</a>';
+        }
+        ?>
+      <a class='page' style="color:white; text-decoration:none;border:1px solid white;margin:2px;padding:2px;width:27px;text-align:center;display:<?php echo ($page>=$total_pages)?'none':'inline-block';?> " href="shop.php?page=<?php echo $next_page ?>">>> </a>
+        </div>
+        <div style='color:aqua'>
+          <strong >Page <?= $page; ?> of <?= $total_pages; ?></strong>
+        </div>
     <?php include "footer.php" ?>
+<!--//////////////////////////Javascript///////////////////////////////////////////////-->
     <script src="shop.js"></script>
+  
   </body>
 </html>
