@@ -17,7 +17,7 @@
           <li id="search-icon">
             <a href="#"><i class="bi bi-search"></i></a>
           </li>
-          <li><a href="#">CART</a></li>
+          <li><a href="/cart.php">CART</a></li>
           <li><a href="/login.php">LOG-IN</a></li>
           <li><a href="/signup.php">SIGN-UP</a></li>
         </ul>

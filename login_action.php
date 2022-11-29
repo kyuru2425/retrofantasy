@@ -1,6 +1,8 @@
 <?php
     include "connection.php";
+    include 'session.php';
 
+    // session_start();
     if(isset($_POST['login'])){
         if(empty($_POST['email'])){
             echo "Email is Required";   
@@ -18,6 +20,7 @@
             $sql1 = "SELECT * FROM customers WHERE email = '$email'";
             $result = mysqli_query($connection, $sql1) OR trigger_error("failed sql". mysqli_error($connection),E_USER_ERROR);
             $row = mysqli_fetch_array($result);
+            $id=$row['customer_id'];
             $count = mysqli_num_rows($result);
             if($count >0){
                 $hashpass = $row['password'];
@@ -25,9 +28,14 @@
             
 
             if($count >0 && password_verify($pass, $hashpass)){
-                echo "<script>window.location.href='temp.php'</script>";
+                $_SESSION["status"] = "valid";
+                $_SESSION["email"] = $email;
+               
+                echo "<script>window.location.href='index.php'</script>";
             }else{
-                echo "<script>alert('User not Found')</script>";
+                $_SESSION["status"] = "invalid";
+                echo "invalid credential";
+                echo "<script>alert('Wrong Email or password')</script>";
                 echo "<script>window.location.href='login.php'</script>";
             }
         }
