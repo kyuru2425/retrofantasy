@@ -31,6 +31,8 @@
                 $_SESSION["status"] = "valid";
                 $_SESSION["email"] = $email;
                
+
+
                 echo "<script>window.location.href='index.php'</script>";
             }else{
                 $_SESSION["status"] = "invalid";

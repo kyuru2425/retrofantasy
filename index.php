@@ -23,8 +23,8 @@
         <ul class="nav-tabs">
           <li><a href="#">HOME</a></li>
           <li><a href="/shop.html">SHOP</a></li>
-          <li><a href="#">ABOUT US</a></li>
-          <li><a href="#">CONTACT US</a></li>
+          <li><a href="/aboutus.php">ABOUT US</a></li>
+          <li><a href="/contactus.php">CONTACT US</a></li>
           <li><a href="#">ACCOUNT</a></li>
         </ul>
         <ul class="nav-tabs-sub">
@@ -75,8 +75,8 @@
             <h3>Quick Links</h3>
             <li><a href="/home.php">Home</a></li>
             <li><a href="#">Shop</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="/about.php">About Us</a></li>
+            <li><a href="/contactus.php">Contact Us</a></li>
             <li><a href="#">Account</a></li>
           </ul>
         </div>
