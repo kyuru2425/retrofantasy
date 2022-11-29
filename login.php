@@ -8,17 +8,39 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
 rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-	
     <link rel="stylesheet" href="home.css" />
+
+<style>
+	
+form {
+	text-align: center;
+	background-color: lightgray;
+	margin: 0px;
+	margin-right: 30%;
+	margin-left: 30%;
+	border-radius: 1rem;
+}
+
+
+#email, #password {
+border-radius: 0.5rem;
+text-align: center;
+padding: 0;
+margin-top: 0%;
+height: 40px;
+
+}
+
+</style>
+
+
 </head>
 <body>
 	<?php include "header.php"; ?>
 <form action="login_action.php" method="post" id="formLogin">
 			<div class="login-form-container">
-
-				<div class="form-head">Login Page</div>
-
-                <div class="field-column">
+				<br><h1>Login Page</h1><br>
+				<div class="field-column">
 					<div>
 						<label for="email">Email</label>
 						<span id="user_info" class="error-info"></span>
@@ -29,12 +51,11 @@ rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxj
 				</div>
 				<div class="field-column">
 					<div>
-						<label for="password">Password</label><span id="password_info"
+						<br><label for="password">Password</label><span id="password_info"
 							class="error-info"></span>
 					</div>
 					<div>
-						<input name="password" id="password" type="password"
-							class="demo-input-box" placeholder="Enter Password">
+						<input name="password" id="password" type="password" class="demo-input-box" placeholder="Enter Password">
 					</div>
 				</div>
 				<div class=field-column>
@@ -43,7 +64,7 @@ rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxj
 					</div>
 				</div>
 				<div class="form-nav-row">
-					<a href="#" class="form-link">Forgot password?</a>
+				<br><a href="#" class="form-link">Forgot password?</a>
 				</div>
 				<div class="login-row form-nav-row">
 					<p>New user?</p>
@@ -55,7 +76,7 @@ rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxj
                     <a href="#"><i class="bi bi-linkedin"></i>
 				</div> -->
 			</div>
-		</form>
+</form>
 
 		<?php include "footer.php"; ?>
 
