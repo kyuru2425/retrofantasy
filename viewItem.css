@@ -1,0 +1,32 @@
+.viewItem-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.viewItem-innercontainer {
+  width: 60%;
+  background-color: aliceblue;
+  min-height: 50vh;
+  justify-content: space-around;
+  display: flex;
+  padding: 1%;
+  border-radius: 25px;
+  box-shadow: 5px 5px 10px 0;
+}
+.viewItem-innercontainer-left,
+.viewItem-innercontainer-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.viewItem-innercontainer-left > img {
+  box-shadow: 5px 5px 10px 0;
+}
+.viewItem-innercontainer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1%;
+}

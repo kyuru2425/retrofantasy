@@ -7,7 +7,7 @@
             <li><a href="/shop.php">Shop</a></li>
             <li><a href="/aboutus.php">About Us</a></li>
             <li><a href="/contactus.php">Contact Us</a></li>
-            <li><a href="#">Account</a></li>
+            <li><a href="/account.php">Account</a></li>
           </ul>
         </div>
         <div class="social-media-footer">

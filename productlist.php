@@ -2,7 +2,17 @@
     include "connection.php";
 
     include "./sqlphp/sql.php";
-    
+    $sqlx = "SELECT * FROM consoles";
+    $resultx = mysqli_query($connection, $sql1) OR trigger_error("failed sql". mysqli_error($connection),E_USER_ERROR);
+    $rowx = mysqli_fetch_array($resultx);
+    $sort="";
+    if(isset($_POST['searchbtn'])){
+        $sort= $_POST['console'];
+        $sql3 = "SELECT * FROM products p INNER JOIN consoles c ON p.product_console_id = c.console_id INNER JOIN product_type pt ON
+                p.product_type_id = pt.type_id INNER JOIN inventory i ON p.product_id = i.product_id INNER JOIN discounts d ON p.discount_id=d.discount_id WHERE c.console_name='$sort'";
+        $result3 = mysqli_query($connection, $sql3) OR trigger_error("failed sql". mysqli_error($connection),E_USER_ERROR);
+        $row3 =mysqli_fetch_array($result3);
+    }
     
 ?>
 <!DOCTYPE html>
@@ -51,6 +61,22 @@
             </div>
             <br>
             <div>
+                <div class="row">
+                    <div class="col-2">
+                        <form action="/productlist.php" method="post">
+                            <input type="hidden" name="console" id="console" value="<?php echo $rowx['console_name'] ?>">
+                            <input type="submit" name="searchbtn" id="searchbtn" value="<?php echo $rowx['console_name'] ?>" class="btn btn-warning">
+                        </form>
+                    </div><br>
+                    <?php while($rowx= mysqli_fetch_array($resultx)){ ?>
+                    <div class="col-2">
+                        <form action="/productlist.php" method="post">
+                            <input type="hidden" name="console" id="console" value="<?php echo $rowx['console_name'] ?>">
+                            <input type="submit" name="searchbtn" id="searchbtn" value="<?php echo $rowx['console_name'] ?>" class="btn btn-warning">
+                        </form>
+                    </div><br>
+                    <?php } ?>
+                </div><br>
                 <table class="table table-dark">
                     <thead>
                         <tr>
@@ -83,7 +109,7 @@
                                         </form> 
                                     </td>
                                     <td>
-                                        <form action='update.php' method='post'> 
+                                        <form action='delete.php' method='post'> 
                                             <input type='submit' value='Delete' name='delete' class='btn btn-danger'>
                                             <input type='hidden' name='prodid' value="<?php echo $row3['product_id'] ?>">
                                         </form> 

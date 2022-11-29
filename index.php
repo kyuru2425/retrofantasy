@@ -49,8 +49,8 @@
       <h1>PRESS START</h1>
       <p>to shop</p>
       <div class="select-start">
-        <button class="shopNowButton">SELECT</button>
-        <button class="shopNowButton">START</button>
+        
+        <button class="shopNowButton"><a href="/shop.php">START</a></button>
       </div>
     </div>
     <div class="console-cards">
