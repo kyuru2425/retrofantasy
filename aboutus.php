@@ -16,25 +16,32 @@ rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxj
     <div>
     <h2 class="text text-primary text-center">About Us</h2>
     <div>
-        <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui nostrum deserunt aliquid id officia ullam numquam
-            <br> recusandae cumque ipsam, architecto consequatur corporis esse itaque maiores quaerat eum omnis nihil? Ex? Lorem ipsum dolor sit, 
-            <br> amet consectetur adipisicing elit. Qui nostrum deserunt aliquid id officia ullam numquam recusandae cumque ipsam, architecto consequatur
-            <br>  corporis esse itaque maiores quaerat eum omnis nihil? Ex?
-        </p>
-    </div>
-    <div>
-        <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui nostrum deserunt aliquid id officia ullam numquam
-            <br> recusandae cumque ipsam, architecto consequatur corporis esse itaque maiores quaerat eum omnis nihil? Ex? Lorem ipsum dolor sit, 
-            <br> amet consectetur adipisicing elit. Qui nostrum deserunt aliquid id officia ullam numquam recusandae cumque ipsam, architecto consequatur
-            <br>  corporis esse itaque maiores quaerat eum omnis nihil? Ex?
-        </p>
-    </div>
+    <br>
+    <h5 class="text text-warning text-center">Retro Fantasy is not an Ordinary Online Store</h5>
     <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui nostrum deserunt aliquid id officia ullam numquam
-            <br> recusandae cumque ipsam, architecto consequatur corporis esse itaque maiores quaerat eum omnis nihil? Ex? Lorem ipsum dolor sit, 
-            <br> amet consectetur adipisicing elit. Qui nostrum deserunt aliquid id officia ullam numquam recusandae cumque ipsam, architecto consequatur
-            <br>  corporis esse itaque maiores quaerat eum omnis nihil? Ex?
+            <br> recusandae cumque ipsam, architecto consequatur corporis esse itaque maiores quaerat eum omnis nihil? Ex? Lorem ipsum
+            <br> dolor sit, amet consectetur adipisicing elit. Qui nostrum deserunt aliquid id officia ullam numquam recusandae cumque 
+            <br> ipsam, architecto consequatur corporis esse itaque maiores quaerat eum omnis nihil? Ex?
         </p>
+    </div>
+    <br>
 
+    <div>
+    <h5 class="text text-warning text-center">All of Our Products are Authentic</h5>
+    <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui nostrum deserunt aliquid id officia ullam numquam
+            <br> recusandae cumque ipsam, architecto consequatur corporis esse itaque maiores quaerat eum omnis nihil? Ex? Lorem ipsum
+            <br> dolor sit, amet consectetur adipisicing elit. Qui nostrum deserunt aliquid id officia ullam numquam recusandae cumque 
+            <br> ipsam, architecto consequatur corporis esse itaque maiores quaerat eum omnis nihil? Ex?
+        </p>
+    </div>
+    <br>
+
+    <h5 class="text text-warning text-center">Top-Notch Customer Service</h5>
+    <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui nostrum deserunt aliquid id officia ullam numquam
+            <br> recusandae cumque ipsam, architecto consequatur corporis esse itaque maiores quaerat eum omnis nihil? Ex? Lorem ipsum
+            <br> dolor sit, amet consectetur adipisicing elit. Qui nostrum deserunt aliquid id officia ullam numquam recusandae cumque 
+            <br> ipsam, architecto consequatur corporis esse itaque maiores quaerat eum omnis nihil? Ex?
+    </p>
     </div>
 
   
