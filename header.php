@@ -20,6 +20,9 @@
           <li><a href="/cart.php">CART</a></li>
           <li><a href="/login.php">LOG-IN</a></li>
           <li><a href="/signup.php">SIGN-UP</a></li>
+          <li><form action="/logout.php" method="post">
+        <input type="submit" value="Log out">
+          </form></li>
         </ul>
       </nav>
     </header>
