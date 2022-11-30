@@ -67,7 +67,7 @@
     
     $result = mysqli_query($connection,$sql) OR trigger_error("failed sql".mysqli_error($connection),E_USER_ERROR);
     $resultpage = mysqli_query($connection,$sqlpage) OR trigger_error("failed sql".mysqli_error($connection),E_USER_ERROR);
-    $rowpage = mysqli_fetch_array($result);
+    //$rowpage = mysqli_fetch_array($result);
     $total_records=mysqli_num_rows($resultpage);
     
     $total_pages = ceil($total_records/$items_per_page);

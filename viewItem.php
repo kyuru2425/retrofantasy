@@ -2,7 +2,7 @@
 
     require 'connection.php'; 
     require 'retrieveShop.php';
-   
+    echo $sql4;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +27,7 @@
     <h1>Item Details</h1>
     <div class='viewItem-innercontainer'>
         <div class='viewItem-innercontainer-left'>
-            <img src="./ProductImages/Nintendo/Game_Images/3DS/mariokart7.jpg" style='width:100%'>
+            <img src="<?php echo $row4['image'] ?>" style='width:100%; max-height: 75%;'>
         </div>
         <div class='viewItem-innercontainer-right' style="max-width: 50%;">
            

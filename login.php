@@ -30,6 +30,9 @@ margin-top: 0%;
 height: 40px;
 
 }
+#hide a{
+	color: black;
+}
 
 </style>
 
@@ -78,7 +81,7 @@ height: 40px;
 			</div>
 </form>
 
-<div id="hide"><a href="adminlogin.php" class="btn hidden">a</a></div>
+<div id="hide"><a href="adminlogin.php" class="btn">a</a></div>
 		<?php include "footer.php"; ?>
 
 <!-- JavaScript Bundle with Popper -->

@@ -21,6 +21,7 @@ body {
   position: sticky;
   top: 0%;
   padding: 0 5vw;
+  z-index: 99;
 }
 .nav-main {
   display: flex;
@@ -341,4 +342,10 @@ footer {
 .page:hover {
   background-color: bisque;
   color: black !important;
+}
+
+/* //////////////////////////////card in edit user////////////////////*/
+#editcard{
+  z-index: -1;
+
 }

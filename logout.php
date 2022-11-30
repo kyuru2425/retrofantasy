@@ -6,7 +6,7 @@ $_SESSION['status']= 'invalid';
 unset($_SESSION["email"]);
 
 mysqli_close($connection);
-session_destroy();
+//session_destroy();
 header('location: index.php ')
 
 
