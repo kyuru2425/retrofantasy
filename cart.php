@@ -1,5 +1,30 @@
 <?php 
     include 'addtocart.php';
+    
+    
+    if ($_SESSION['status'] == 'invalid'){
+        echo "<script>alert('Log in account first');</script>";
+        echo "<script>window.location.href='login.php'</script>";
+    }
+
+    if(isset($_POST['deleteitem'])){
+        $price=$_POST['price'];
+        $detail_id = $_POST['detail_id'];
+        $sqldelete = "DELETE FROM cart_details WHERE detail_id =$detail_id;";
+        $resultdelete = mysqli_query($connection,$sqldelete);
+
+        $sqlafterdelete ="SELECT * FROM cart WHERE customer_email= '$emailforcart' AND status=1;";
+        $resultafterdelete =mysqli_query($connection,$sqlafterdelete);
+        $rowafterdelete = mysqli_fetch_array($resultafterdelete);
+        $total=$rowafterdelete['total'];
+
+        $newtotal=$total-$price;
+        $sqlupdatedafterdel= "UPDATE cart SET total = '$newtotal' WHERE customer_email= '$emailforcart' AND status=1;";
+        $resultupdateafterdel= mysqli_query($connection,$sqlupdatedafterdel);
+        echo "<script>window.location.href='cart.php'</script>";
+
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,19 +52,27 @@ rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxj
                     <td></td>
                     <td>Price</td>
                     <td>Quantity</td>
-                    <td>Total</td>
+                    <td style="text-align:right">Total</td>
+                    <td></td>
 
                 </tr>
             </thead>
             <tbody class="cart-table">
                 <?php 
                 while($row02=mysqli_fetch_array($result02)){?>
-                    <tr>
-                        <td class="align-middle"><img src="./ProductImages/Nintendo/Game_Images/3DS/mariokart7.jpg" style='width:60px'></td>
+                    <tr style="height:80px">
+                        <td class="align-middle" ><img src="<?php echo $row02['image']?>" style='width:60px'></td>
                         <td class="align-middle"><?php echo $row02['product_name']?></td>
-                        <td class="align-middle"><?php echo $row02['price']?></td>
-                        <td class="align-middle">2</td>
-                        <td class="align-middle"><?php echo ($row02['price']*2) ;?></td>
+                        <td class="align-middle " ><?php echo $row02['price']?></td>
+                        <td class="align-middle " ><?php echo $row02['quantity']?></td>
+                        <td class="align-middle " style="text-align:right">&#8369;<?php echo ($row02['price']*$row02['quantity']) ;?>.00</td>
+                        <td class="align-middle "  style="text-align:right">
+                            <form action="/cart.php" method='POST'>
+                            <button onclick="return confirm('Are you sure you want to remove this item?')" class="btn"type="submit" name='deleteitem'><i class="bi bi-trash3"></i></button>
+                            <input type="hidden" name='detail_id' id="detail_id" value="<?php echo $row02['detail_id']?>">
+                            <input type="hidden" name='price' value="<?php echo $row02['price']?>"/>
+                            </form>
+                        </td>
 
                     </tr>
 
@@ -51,13 +84,17 @@ rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxj
                 <td></td>
                 <td></td>
                 <td>TOTAL</td>
-                <td><?php while($row03=mysqli_fetch_array($result03)){
+                <td class="text-warning"><h3 style="text-align:right"  class="text-primary">&#8369;<?php while($row03=mysqli_fetch_array($result03)){
                         echo $row03['total'];
-                     } ?></td>
+                     } ?>.00</h3></td> 
             </tr>
             </tfoot>
         </table>
-                    <div class="checkout"><button class="btn btn-primary" type="Submit">CHECKOUT</button></div> 
+                    <div class="checkout">
+                        <form action="">
+                            <input type="submit" name='checkout' value='CHECKOUT'>
+                        </form>
+                    </div> 
     </div>
     </div>
 
