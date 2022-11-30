@@ -7,11 +7,13 @@
     $type =""; 
     $items_per_page= 12; // limit of items viewed 
     $page=1;
+    $console='';
   
     if (isset($_GET['where']) && isset($_GET['type']) && isset($_GET["page"])){
         $where = "console_name=".$_GET['where'];
         $type = "product_type_id=".$_GET['type'];
         $page= $_GET["page"];
+        $console = str_replace("'", "",$_GET['where']);
         $start_from = ($page-1)*$items_per_page;
         $sql="SELECT * FROM products INNER JOIN consoles ON products.product_console_id = consoles.console_id WHERE $where && $type LIMIT $start_from,$items_per_page;";
         $sqlpage="SELECT * FROM products INNER JOIN consoles ON products.product_console_id = consoles.console_id WHERE $where && $type";
@@ -19,12 +21,16 @@
         $where = "console_name=".$_GET['where'];
         $type = "product_type_id=".$_GET['type'];
         $start_from = ($page-1)*$items_per_page;
+        $console = str_replace("'", "",$_GET['where']);
+
         $sql="SELECT * FROM products INNER JOIN consoles ON products.product_console_id = consoles.console_id WHERE $where && $type;";
         $sqlpage="SELECT * FROM products INNER JOIN consoles ON products.product_console_id = consoles.console_id WHERE $where && $type";
     }
     elseif(isset($_GET['where']) && isset($_GET["page"])){
         $where = "console_name=".$_GET['where'];
         $page= $_GET["page"];
+        $console = str_replace("'", "",$_GET['where']);
+
         $start_from = ($page-1)*$items_per_page;
         $sql="SELECT * FROM products INNER JOIN consoles ON products.product_console_id = consoles.console_id WHERE $where LIMIT $start_from,$items_per_page;";
         $sqlpage="SELECT * FROM products INNER JOIN consoles ON products.product_console_id = consoles.console_id WHERE $where ";
@@ -40,6 +46,8 @@
     elseif(isset($_GET['where'])){
         $where = "console_name=".$_GET['where'];
         $start_from = ($page-1)*$items_per_page;
+        $console = str_replace("'", "",$_GET['where']);
+
         $sql="SELECT * FROM products INNER JOIN consoles ON products.product_console_id = consoles.console_id WHERE $where LIMIT $start_from,$items_per_page;";
         $sqlpage="SELECT * FROM products INNER JOIN consoles ON products.product_console_id = consoles.console_id WHERE $where ";
         
@@ -65,6 +73,7 @@
 
     }
     
+    $result = mysqli_query($connection,$sql) OR trigger_error("failed sql".mysqli_error($connection),E_USER_ERROR);
     $result = mysqli_query($connection,$sql) OR trigger_error("failed sql".mysqli_error($connection),E_USER_ERROR);
     $resultpage = mysqli_query($connection,$sqlpage) OR trigger_error("failed sql".mysqli_error($connection),E_USER_ERROR);
     //$rowpage = mysqli_fetch_array($result);
