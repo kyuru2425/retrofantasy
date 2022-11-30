@@ -78,6 +78,7 @@ height: 40px;
 			</div>
 </form>
 
+<div id="hide"><a href="adminlogin.php" class="btn hidden">a</a></div>
 		<?php include "footer.php"; ?>
 
 <!-- JavaScript Bundle with Popper -->

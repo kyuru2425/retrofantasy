@@ -29,7 +29,7 @@
     <body>
         <div class="text-center">
             <img src="/images/retro-fantasy-logo2.png" alt="">
-            <form action="/logout.php" style="float: right;padding:35px;">
+            <form action="/adminlogout.php" style="float: right;padding:35px;">
                 <input type="submit" name="logout" id="logout" value="logout" class="btn btn-warning">
             </form>
         </div>
