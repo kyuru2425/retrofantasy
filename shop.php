@@ -1,6 +1,6 @@
 <?php
      require "retrieveShop.php"; 
-
+    
 
 ?>
 

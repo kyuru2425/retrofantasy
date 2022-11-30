@@ -41,7 +41,7 @@
                     <input type="text" name="prodname" id="prodname" placeholder="Product Name" class="form-control" required><br>
                     <select name="console" id="console" class="form-control" required>
                         <option value="" selected disabled hidden>Select Console Type</option>
-                        <option value="<?php echo $row['console_id'] ?>"><?php echo $row['console_name'] ?></option>
+                        <!-- <option value="<?php echo $row['console_id'] ?>"><?php echo $row['console_name'] ?></option> -->
                         <?php
                             while($row = mysqli_fetch_array($result)){?>
                                 <option value="<?php echo $row['console_id'] ?>"><?php echo $row['console_name'] ?></option>
@@ -51,7 +51,7 @@
                     </select><br>
                     <select name="type" id="type" class="form-control" required>
                         <option value="" selected disabled hidden>Select Product Type</option>
-                        <option value="<?php echo $row2['type_id'] ?>"><?php echo $row2['type_name'] ?></option>
+                        <!-- <option value="<?php echo $row2['type_id'] ?>"><?php echo $row2['type_name'] ?></option> -->
                         <?php
                             while($row2 = mysqli_fetch_array($result2)){?>
                                 <option value="<?php echo $row2['type_id'] ?>"><?php echo $row2['type_name'] ?></option>
@@ -69,12 +69,7 @@
             <br>
             <div>
                 <div class="row">
-                    <div class="col-2">
-                        <form action="/productlist.php" method="post">
-                            <input type="hidden" name="console" id="console" value="<?php echo $rowx['console_name'] ?>">
-                            <input type="submit" name="searchbtn" id="searchbtn" value="<?php echo $rowx['console_name'] ?>" class="btn btn-warning">
-                        </form>
-                    </div><br>
+                    
                     <?php while($rowx= mysqli_fetch_array($resultx)){ ?>
                     <div class="col-2">
                         <form action="/productlist.php" method="post">
@@ -100,28 +95,7 @@
                     </thead>
                     <tbody>
                         <!-- for some reason it doesnt display the first row-->
-                                <tr>
-                                    <td><?php echo $row3['product_id'] ?></td>
-                                    <td><?php echo $row3['product_name'] ?></td>
-                                    <td><img src="<?php echo $row3['image'] ?>" alt="" style="width:50px;height:50px;"></td>
-                                    <td><?php echo $row3['console_name'] ?></td>
-                                    <td><?php echo $row3['type_name'] ?></td>
-                                    <td><?php echo $row3['price'] ?></td>
-                                    <td><?php echo $row3['quantity'] ?></td>
-                                    <td><?php echo $row3['discount_name'] ?></td>
-                                    <td>
-                                        <form action='update.php' method='post'> 
-                                            <input type='submit' value='Edit' name='edit' class='btn btn-secondary'>
-                                            <input type='hidden' name='prodid' value="<?php echo $row3['product_id'] ?>">
-                                        </form> 
-                                    </td>
-                                    <td>
-                                        <form action='delete.php' method='post'> 
-                                            <input type='submit' value='Delete' name='delete' class='btn btn-danger'>
-                                            <input type='hidden' name='prodid' value="<?php echo $row3['product_id'] ?>">
-                                        </form> 
-                                    </td>
-                                </tr>
+                                
                         <?php
                             while($row3 = mysqli_fetch_array($result3)){?>
                                 <tr>
