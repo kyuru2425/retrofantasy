@@ -1,4 +1,5 @@
 //drop down effect for nintendo//
+
 let nintendo = document.getElementById("nintendo");
 // let nintendoDisplay = "none";
 // nintendo.addEventListener("click", function () {
@@ -62,6 +63,7 @@ searchIcon.addEventListener("click", function () {
     inputDisplay = "none";
   }
 });
+
 // //////////////////NINTENDO////////////////////////////
 // /////////////display console tab//////////////////////
 // let nintendo64 = document.getElementById("nintendo64");
@@ -76,77 +78,78 @@ searchIcon.addEventListener("click", function () {
 // let threeds = document.getElementById("3ds");
 
 // nintendo64.addEventListener("click", function () {
-//   document.getElementById("console-container").style.display = "block";
-//   let console = document.getElementsByClassName("console-name");
-//   for (var i = 0; i < console.length; i++) {
-//     console[i].innerHTML = nintendo64.textContent;
-//   }
+// // document.getElementById("console-container").style.display = "block";
+
+// let console = document.getElementsByClassName("console-name");
+// for (var i = 0; i < console.length; i++) {
+// console[i].innerHTML = nintendo64.textContent;
+// }
 // });
 // gamecube.addEventListener("click", function () {
-//   document.getElementById("console-container").style.display = "block";
-//   let console = document.getElementsByClassName("console-name");
-//   for (var i = 0; i < console.length; i++) {
-//     console[i].innerHTML = gamecube.textContent;
-//   }
+// //document.getElementById("console-container").style.display = "block";
+// let console = document.getElementsByClassName("console-name");
+// for (var i = 0; i < console.length; i++) {
+// console[i].innerHTML = gamecube.textContent;
+// }
 // });
 // nintendoNes.addEventListener("click", function () {
-//   document.getElementById("console-container").style.display = "block";
-//   let console = document.getElementsByClassName("console-name");
-//   for (var i = 0; i < console.length; i++) {
-//     console[i].innerHTML = nintendoNes.textContent;
-//   }
+// // document.getElementById("console-container").style.display = "block";
+// let console = document.getElementsByClassName("console-name");
+// for (var i = 0; i < console.length; i++) {
+// console[i].innerHTML = nintendoNes.textContent;
+// }
 // });
 // superNintendo.addEventListener("click", function () {
-//   document.getElementById("console-container").style.display = "block";
-//   let console = document.getElementsByClassName("console-name");
-//   for (var i = 0; i < console.length; i++) {
-//     console[i].innerHTML = superNintendo.textContent;
-//   }
+// //document.getElementById("console-container").style.display = "block";
+// let console = document.getElementsByClassName("console-name");
+// for (var i = 0; i < console.length; i++) {
+// console[i].innerHTML = superNintendo.textContent;
+// }
 // });
 // wii.addEventListener("click", function () {
-//   document.getElementById("console-container").style.display = "block";
-//   let console = document.getElementsByClassName("console-name");
-//   for (var i = 0; i < console.length; i++) {
-//     console[i].innerHTML = wii.textContent;
-//   }
+// //document.getElementById("console-container").style.display = "block";
+// let console = document.getElementsByClassName("console-name");
+// for (var i = 0; i < console.length; i++) {
+// console[i].innerHTML = wii.textContent;
+// }
 // });
 // wiiU.addEventListener("click", function () {
-//   document.getElementById("console-container").style.display = "block";
-//   let console = document.getElementsByClassName("console-name");
-//   for (var i = 0; i < console.length; i++) {
-//     console[i].innerHTML = wiiU.textContent;
-//   }
+// //document.getElementById("console-container").style.display = "block";
+// let console = document.getElementsByClassName("console-name");
+// for (var i = 0; i < console.length; i++) {
+// console[i].innerHTML = wiiU.textContent;
+// }
 // });
 
 // gameboy.addEventListener("click", function () {
-//   document.getElementById("console-container").style.display = "block";
-//   let console = document.getElementsByClassName("console-name");
-//   for (var i = 0; i < console.length; i++) {
-//     console[i].innerHTML = gameboy.textContent;
-//   }
+// ///document.getElementById("console-container").style.display = "block";
+// let console = document.getElementsByClassName("console-name");
+// for (var i = 0; i < console.length; i++) {
+// console[i].innerHTML = gameboy.textContent;
+// }
 // });
 // gameboyAdvance.addEventListener("click", function () {
-//   document.getElementById("console-container").style.display = "block";
-//   let console = document.getElementsByClassName("console-name");
-//   for (var i = 0; i < console.length; i++) {
-//     console[i].innerHTML = gameboyAdvance.textContent;
-//   }
+// //document.getElementById("console-container").style.display = "block";
+// let console = document.getElementsByClassName("console-name");
+// for (var i = 0; i < console.length; i++) {
+// console[i].innerHTML = gameboyAdvance.textContent;
+// }
 // });
 
 // ds.addEventListener("click", function () {
-//   document.getElementById("console-container").style.display = "block";
-//   let console = document.getElementsByClassName("console-name");
-//   for (var i = 0; i < console.length; i++) {
-//     console[i].innerHTML = ds.textContent;
-//   }
+// //document.getElementById("console-container").style.display = "block";
+// let console = document.getElementsByClassName("console-name");
+// for (var i = 0; i < console.length; i++) {
+// console[i].innerHTML = ds.textContent;
+// }
 // });
 
 // threeds.addEventListener("click", function () {
-//   document.getElementById("console-container").style.display = "block";
-//   let console = document.getElementsByClassName("console-name");
-//   for (var i = 0; i < console.length; i++) {
-//     console[i].innerHTML = threeds.textContent;
-//   }
+// //document.getElementById("console-container").style.display = "block";
+// let console = document.getElementsByClassName("console-name");
+// for (var i = 0; i < console.length; i++) {
+// console[i].innerHTML = threeds.textContent;
+// }
 // });
 // //////////////SEGA//////////////////////
 // /////////////display console tab//////////////////////
@@ -158,46 +161,46 @@ searchIcon.addEventListener("click", function () {
 // let masterSystem = document.getElementById("masterSystem");
 
 // genesis.addEventListener("click", function () {
-//   document.getElementById("console-container").style.display = "block";
-//   let console = document.getElementsByClassName("console-name");
-//   for (var i = 0; i < console.length; i++) {
-//     console[i].innerHTML = genesis.textContent;
-//   }
+// //document.getElementById("console-container").style.display = "block";
+// let console = document.getElementsByClassName("console-name");
+// for (var i = 0; i < console.length; i++) {
+// console[i].innerHTML = genesis.textContent;
+// }
 // });
 // dreamcast.addEventListener("click", function () {
-//   document.getElementById("console-container").style.display = "block";
-//   let console = document.getElementsByClassName("console-name");
-//   for (var i = 0; i < console.length; i++) {
-//     console[i].innerHTML = dreamcast.textContent;
-//   }
+// //document.getElementById("console-container").style.display = "block";
+// let console = document.getElementsByClassName("console-name");
+// for (var i = 0; i < console.length; i++) {
+// console[i].innerHTML = dreamcast.textContent;
+// }
 // });
 // saturn.addEventListener("click", function () {
-//   document.getElementById("console-container").style.display = "block";
-//   let console = document.getElementsByClassName("console-name");
-//   for (var i = 0; i < console.length; i++) {
-//     console[i].innerHTML = saturn.textContent;
-//   }
+// //document.getElementById("console-container").style.display = "block";
+// let console = document.getElementsByClassName("console-name");
+// for (var i = 0; i < console.length; i++) {
+// console[i].innerHTML = saturn.textContent;
+// }
 // });
 // gamegear.addEventListener("click", function () {
-//   document.getElementById("console-container").style.display = "block";
-//   let console = document.getElementsByClassName("console-name");
-//   for (var i = 0; i < console.length; i++) {
-//     console[i].innerHTML = gamegear.textContent;
-//   }
+// //document.getElementById("console-container").style.display = "block";
+// let console = document.getElementsByClassName("console-name");
+// for (var i = 0; i < console.length; i++) {
+// console[i].innerHTML = gamegear.textContent;
+// }
 // });
 // x32.addEventListener("click", function () {
-//   document.getElementById("console-container").style.display = "block";
-//   let console = document.getElementsByClassName("console-name");
-//   for (var i = 0; i < console.length; i++) {
-//     console[i].innerHTML = x32.textContent;
-//   }
+// //document.getElementById("console-container").style.display = "block";
+// let console = document.getElementsByClassName("console-name");
+// for (var i = 0; i < console.length; i++) {
+// console[i].innerHTML = x32.textContent;
+// }
 // });
 // masterSystem.addEventListener("click", function () {
-//   document.getElementById("console-container").style.display = "block";
-//   let console = document.getElementsByClassName("console-name");
-//   for (var i = 0; i < console.length; i++) {
-//     console[i].innerHTML = masterSystem.textContent;
-//   }
+// //document.getElementById("console-container").style.display = "block";
+// let console = document.getElementsByClassName("console-name");
+// for (var i = 0; i < console.length; i++) {
+// console[i].innerHTML = masterSystem.textContent;
+// }
 // });
 // //////////////////PLAYSTATION////////////////////////////
 // /////////////display console tab//////////////////////
@@ -209,63 +212,64 @@ searchIcon.addEventListener("click", function () {
 // let psVita = document.getElementById("psVita");
 
 // playstation1.addEventListener("click", function () {
-//   document.getElementById("console-container").style.display = "block";
-//   let console = document.getElementsByClassName("console-name");
-//   for (var i = 0; i < console.length; i++) {
-//     console[i].innerHTML = playstation1.textContent;
-//   }
+// //document.getElementById("console-container").style.display = "block";
+
+// let console = document.getElementsByClassName("console-name");
+// for (var i = 0; i < console.length; i++) {
+// console[i].innerHTML = playstation1.textContent;
+// }
 // });
 // playstation2.addEventListener("click", function () {
-//   document.getElementById("console-container").style.display = "block";
-//   let console = document.getElementsByClassName("console-name");
-//   for (var i = 0; i < console.length; i++) {
-//     console[i].innerHTML = playstation2.textContent;
-//   }
+// //document.getElementById("console-container").style.display = "block";
+// let console = document.getElementsByClassName("console-name");
+// for (var i = 0; i < console.length; i++) {
+// console[i].innerHTML = playstation2.textContent;
+// }
 // });
 // playstation3.addEventListener("click", function () {
-//   document.getElementById("console-container").style.display = "block";
-//   let console = document.getElementsByClassName("console-name");
-//   for (var i = 0; i < console.length; i++) {
-//     console[i].innerHTML = playstation3.textContent;
-//   }
+// //document.getElementById("console-container").style.display = "block";
+// let console = document.getElementsByClassName("console-name");
+// for (var i = 0; i < console.length; i++) {
+// console[i].innerHTML = playstation3.textContent;
+// }
 // });
 // playstation4.addEventListener("click", function () {
-//   document.getElementById("console-container").style.display = "block";
-//   let console = document.getElementsByClassName("console-name");
-//   for (var i = 0; i < console.length; i++) {
-//     console[i].innerHTML = playstation4.textContent;
-//   }
+// //document.getElementById("console-container").style.display = "block";
+// let console = document.getElementsByClassName("console-name");
+// for (var i = 0; i < console.length; i++) {
+// console[i].innerHTML = playstation4.textContent;
+// }
 // });
 // playstationPortable.addEventListener("click", function () {
-//   document.getElementById("console-container").style.display = "block";
-//   let console = document.getElementsByClassName("console-name");
-//   for (var i = 0; i < console.length; i++) {
-//     console[i].innerHTML = playstationPortable.textContent;
-//   }
+// //document.getElementById("console-container").style.display = "block";
+// let console = document.getElementsByClassName("console-name");
+// for (var i = 0; i < console.length; i++) {
+// console[i].innerHTML = playstationPortable.textContent;
+// }
 // });
 
 // psVita.addEventListener("click", function () {
-//   document.getElementById("console-container").style.display = "block";
-//   let console = document.getElementsByClassName("console-name");
-//   for (var i = 0; i < console.length; i++) {
-//     console[i].innerHTML = psVita.textContent;
-//   }
+// //document.getElementById("console-container").style.display = "block";
+// let console = document.getElementsByClassName("console-name");
+// for (var i = 0; i < console.length; i++) {
+// console[i].innerHTML = psVita.textContent;
+// }
 // });
 // //////////////////XBOX////////////////////////////
 // /////////////display console tab//////////////////////
 // let originalXbox = document.getElementById("originalXbox");
 // let xbox360 = document.getElementById("xbox360");
 // originalXbox.addEventListener("click", function () {
-//   document.getElementById("console-container").style.display = "block";
-//   let console = document.getElementsByClassName("console-name");
-//   for (var i = 0; i < console.length; i++) {
-//     console[i].innerHTML = originalXbox.textContent;
-//   }
+// //document.getElementById("console-container").style.display = "block";
+// let console = document.getElementsByClassName("console-name");
+// for (var i = 0; i < console.length; i++) {
+// console[i].innerHTML = originalXbox.textContent;
+// }
 // });
 // xbox360.addEventListener("click", function () {
-//   document.getElementById("console-container").style.display = "block";
-//   let console = document.getElementsByClassName("console-name");
-//   for (var i = 0; i < console.length; i++) {
-//     console[i].innerHTML = xbox360.textContent;
-//   }
+// //document.getElementById("console-container").style.display = "block";
+// let console = document.getElementsByClassName("console-name");
+// for (var i = 0; i < console.length; i++) {
+// console[i].innerHTML = xbox360.textContent;
+// }
 // });
