@@ -27,9 +27,16 @@
         <link rel="stylesheet" href="home.css" />
     </head>
     <body>
-        <?php include "header.php" ?>
+        <div class="text-center">
+            <img src="/images/retro-fantasy-logo2.png" alt="">
+            <form action="/adminlogout.php" style="float: right;padding:35px;">
+                <input type="submit" name="logout" id="logout" value="logout" class="btn btn-warning">
+            </form>
+        </div>
+        <br>
         <div class="container">
             <div>
+                <h2>Add A Product?</h2>
                 <form action="/productformcreate.php" method="post" enctype="multipart/form-data">
                     <input type="text" name="prodname" id="prodname" placeholder="Product Name" class="form-control" required><br>
                     <select name="console" id="console" class="form-control" required>
@@ -150,7 +157,9 @@
 
 
 
-        <?php include "footer.php"; ?>
+        <footer><div class="copyright">
+        Copyright <i class="bi bi-c-circle"></i> Retro Fantasy
+        </div></footer>
         <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     </body>

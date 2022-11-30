@@ -80,15 +80,29 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+        />
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="home.css" />
     </head>
     <body>
+        <div class="text-center">
+            <img src="/images/retro-fantasy-logo2.png" alt="">
+            <form action="/logout.php" style="float: right;padding:35px;">
+                <input type="submit" name="logout" id="logout" value="logout" class="btn btn-warning">
+            </form>
+        </div>
+        <br>
         <div class="container">
-            <h2>Edit Product</h2>
+            <h2>Edit This Product?</h2>
             <form action="update.php" method="post" enctype="multipart/form-data">
                 <input type='hidden' name='prodid' value="<?php echo $row4['product_id'] ?>">
                 <div class="form-group">
                     <label for="prodname">Product Name</label>
-                    <input type="text" name="prodname" id="prodname" value="<?php echo $row4['product_name'] ?>">
+                    <input type="text" name="prodname" id="prodname" value="<?php echo $row4['product_name'] ?>" class="form-control">
                 </div>
                 <br>
                 <div class="form-group">
@@ -121,12 +135,12 @@
                 <br>
                 <div class="form-group">
                     <label for="price">Product Price</label>
-                    <input type="text" name="price" id="price" value="<?php echo $row4['price'] ?>">
+                    <input type="text" name="price" id="price" value="<?php echo $row4['price'] ?>" class="form-control">
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="discount">Discount Type</label>
-                    <input type="number" name="discount" id="discount" value="<?php echo $row4['discount_id'] ?>">
+                    <input type="number" name="discount" id="discount" value="<?php echo $row4['discount_id'] ?>" class="form-control">
                 </div>
                 <br>
                 <div class="form-group">
@@ -137,11 +151,15 @@
                 <br>
                 <div class="form-group">
                     <label for="inventory">In Inventory</label>
-                    <input type="number" name="inventory" id="inventory" value="<?php echo $row4['quantity'] ?>">
+                    <input type="number" name="inventory" id="inventory" value="<?php echo $row4['quantity'] ?>" class="form-control">
                 </div>
                 <br>
                 <input type="submit" name="update" id="update" class="btn btn-primary">
             </form>
         </div>
+
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     </body>
 </html>
