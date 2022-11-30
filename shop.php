@@ -90,19 +90,19 @@
         <ul class="console-tabs">
           <li>
           <a href="?<?php echo $parameter1; ?>">
-            <p class="console-name"></p>
+            <p class="console-name"><?php echo $console ?></p>
             <p>System</p>
           </a>
           </li>
           <li>
           <a href="?<?php echo $parameter2; ?>">
-            <p class="console-name"></p>
+            <p class="console-name"><?php echo $console ?></p>
             <p>Games</p> 
           </a>
           </li>
           <li>
           <a href="?<?php echo $parameter3; ?>">
-            <p class="console-name"></p>
+            <p class="console-name"><?php echo $console ?></p>
             <p>Accesories</p>
           </a> 
           </li>
@@ -115,22 +115,22 @@
     
     <?php
     
-      while($row = mysqli_fetch_array($result)){?>
+      while($row123 = mysqli_fetch_assoc($result)){?>
       
                  <div class="shop-cards" style="height:35vh">
 
                 <div style="width:100%;height: 70%; background-color:gray;display:flex;justify-content:center ">
-                  <img src="<?php echo $row['image']; ?>" style='height:100%; max-width: 100%'>
+                  <img src="<?php echo $row123['image']; ?>" style='height:100%; max-width: 100%'>
                 </div>
-                  <p><?php echo $row['product_id']; ?></p> 
-                  <p><?php echo $row['product_name']; ?></p>
-                  <p>&#8369; <?php echo $row['price']; ?>.00</p>
+                  <p><?php echo $row123['product_id']; ?></p> 
+                  <p><?php echo $row123['product_name']; ?></p>
+                  <p>&#8369; <?php echo $row123['price']; ?>.00</p>
                   <!--  name='edit' >View</button> -->
                   <form  action="viewItem.php" method='POST'>
                  <button class="view" value="view"  type='submit' name="view"  >View</button>
                  
                  <input type="hidden" name='product_name' 
-                            value= '<?php echo $row['product_name']; ?>'>
+                            value= '<?php echo $row123['product_name']; ?>'>
                   </form> 
                  </div>
          

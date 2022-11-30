@@ -104,7 +104,7 @@ body {
 }
 
 .shopNowButton {
-  background-color: #39268f;
+  background-color: #f0ad4e;
   border: none;
   padding: 10px;
   border-radius: 10px;
@@ -267,6 +267,7 @@ body {
   list-style: none;
   width: 90%;
   text-align: center;
+  color: white;
 }
 .shop-list {
   margin: 1vh 10vw;
