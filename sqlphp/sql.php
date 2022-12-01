@@ -1,7 +1,7 @@
 <?php
     $sql1 = "SELECT * FROM consoles";
     $result = mysqli_query($connection, $sql1) OR trigger_error("failed sql". mysqli_error($connection),E_USER_ERROR);
-    //$row = mysqli_fetch_array($result);
+    $row = mysqli_fetch_array($result);
 
     $sql2 = "SELECT * FROM product_type";
     $result2 = mysqli_query($connection, $sql2) OR trigger_error("failed sql". mysqli_error($connection),E_USER_ERROR);

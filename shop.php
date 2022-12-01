@@ -59,7 +59,7 @@
             <li><a href="?where='Playstation 1'"><div id="playstation1">PlayStation 1</div></a></li>
             <li><a href="?where='Playstation 2'"><div id="playstation2">PlayStation 2</div></a></li>
             <li><a href="?where='Playstation 3'"><div id="playstation3">PlayStation 3</div></a></li>
-            <li><a href="?where='Playstation 4'"><div  id="playstation4">PlayStation </div></a></li>
+            <li><a href="?where='Playstation 4'"><div  id="playstation4">PlayStation 4</div></a></li>
             <li><a href="?where='Playstation Portable'"><div id="playstationPortable">PlayStation Portable</div></a></li>
             <li ><a href="?where='Playstation Vita'"><div id="psVita">PS Vita</div></a></li>
           </ul>

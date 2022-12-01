@@ -34,6 +34,19 @@ $rowstatus=0;
             //     $resultnewinventory = mysqli_query($connection,$sqlnewinventory);
 
             // }
+            $sqlinventory = "SELECT c.customer_email, c.status, i.quantity AS inqty, cd.quantity AS cdqty, p.product_id FROM cart c INNER JOIN cart_details cd ON c.cart_id = cd.cart_id 
+            INNER JOIN products p ON cd.product_id = p.product_id
+            INNER JOIN inventory i ON p.product_id = i.product_id
+            WHERE c.customer_email='$emailcheckout' AND c.status=1";
+            $resultinventory=mysqli_query($connection,$sqlinventory);
+            while($rowinventory = mysqli_fetch_array($resultinventory)){
+                $qty = $rowinventory['inqty'];
+                $qty2 = $rowinventory['cdqty'];
+                $prodid = $rowinventory['product_id'];
+                $newqty = $qty-$qty2;
+                $sqlnewinventory = "UPDATE inventory SET quantity = $newqty WHERE product_id =$prodid ";
+                $resultnewinventory = mysqli_query($connection, $sqlnewinventory);
+            }
             
 
             $sqlcheckout= "UPDATE cart SET status =0 WHERE customer_email= '$emailcheckout';";

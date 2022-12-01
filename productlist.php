@@ -41,7 +41,7 @@
                     <input type="text" name="prodname" id="prodname" placeholder="Product Name" class="form-control" required><br>
                     <select name="console" id="console" class="form-control" required>
                         <option value="" selected disabled hidden>Select Console Type</option>
-                        <!-- <option value="<?php echo $row['console_id'] ?>"><?php echo $row['console_name'] ?></option> -->
+                        <option value="<?php echo $row['console_id'] ?>"><?php echo $row['console_name'] ?></option>
                         <?php
                             while($row = mysqli_fetch_array($result)){?>
                                 <option value="<?php echo $row['console_id'] ?>"><?php echo $row['console_name'] ?></option>
@@ -69,7 +69,12 @@
             <br>
             <div>
                 <div class="row">
-                    
+                    <div class="col-2">
+                        <form action="/productlist.php" method="post">
+                            <input type="hidden" name="console" id="console" value="<?php echo $rowx['console_name'] ?>">
+                            <input type="submit" name="searchbtn" id="searchbtn" value="<?php echo $rowx['console_name'] ?>" class="btn btn-warning">
+                        </form>
+                    </div><br>
                     <?php while($rowx= mysqli_fetch_array($resultx)){ ?>
                     <div class="col-2">
                         <form action="/productlist.php" method="post">
