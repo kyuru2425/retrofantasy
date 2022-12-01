@@ -45,7 +45,7 @@ border-bottom: 4px solid #f0ad4e ;
 <body>
 	<?php include "header.php"; ?>
 	<div class="container" style="height:90vh;display:flex;justify-content:center;align-items:center" >
-<form style="height:60%; width:40%" action="login_action.php" method="post" id="formLogin">
+<form style="height:60%; width:40%; min-height:500px; " action="login_action.php" method="post" id="formLogin">
 			<div class="login-form-container">
 				<br><h1 style="color:#f0ad4e">Login Page</h1><br>
 				<div class="field-column">

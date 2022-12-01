@@ -59,7 +59,7 @@ $rowstatus=0;
         
 
             
-            echo "<script>swal('Successfully Checked out');</script>";
+            echo "<script>alert('Successfully Checked out');</script>";
             echo "<script>window.location.href='cart.php'</script>";
         }
         

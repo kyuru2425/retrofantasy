@@ -37,7 +37,7 @@
             <h5 class='ms-5'>Console: <?php echo $row4['console_name'] ?></h5>
             <h5 class='ms-5'>Type: <?php echo $row4['type_name'] ?></h4>
             
-            <h4>Item Limit per Transaction:<span id='stock'> 3 </span></h4>
+            <h3>Available in stock:<span id='stock'><?php echo $row4['quantity']?></span></h3>
             <h4 style="color:red" id=outofstock><?php echo ($row4['quantity']==0?"Out of Stock":"");?></h4>
 
             

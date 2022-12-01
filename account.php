@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="home.css" />
         <style>
             #cont{
-                height: 90vh;
+                /*height: 90vh;*/
                 /* background-color: beige; */
                 padding: 20px;
             }
@@ -76,7 +76,7 @@
             <br>
             <div>
                 <h4>Order History</h4>
-                <table class="table">
+                <table class="table" style="overflow-x:auto">
                     <thead>
                         <tr>
                             <th>Cart ID</th>
