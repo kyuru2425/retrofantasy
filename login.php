@@ -14,11 +14,13 @@ rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxj
 	
 form {
 	text-align: center;
-	background-color: lightgray;
+	background-color: black;
 	margin: 0px;
 	margin-right: 30%;
 	margin-left: 30%;
 	border-radius: 1rem;
+	box-shadow: 0 0 10px white;
+	
 }
 
 
@@ -28,11 +30,13 @@ text-align: center;
 padding: 0;
 margin-top: 0%;
 height: 40px;
+border-bottom: 4px solid #f0ad4e ;
 
 }
 #hide a{
 	color: black;
 }
+
 
 </style>
 
@@ -40,38 +44,39 @@ height: 40px;
 </head>
 <body>
 	<?php include "header.php"; ?>
-<form action="login_action.php" method="post" id="formLogin">
+	<div class="container" style="height:90vh;display:flex;justify-content:center;align-items:center" >
+<form style="height:60%; width:40%" action="login_action.php" method="post" id="formLogin">
 			<div class="login-form-container">
-				<br><h1>Login Page</h1><br>
+				<br><h1 style="color:#f0ad4e">Login Page</h1><br>
 				<div class="field-column">
 					<div>
-						<label for="email">Email</label>
+						<label for="email" style="color:#f0ad4e">Email</label>
 						<span id="user_info" class="error-info"></span>
 					</div>
 					<div>
-						<input name="email" id="email" type="email" class="demo-input-box" placeholder="Enter Email">
+						<input style="font-family:Verdana, Geneva, Tahoma, sans-serif" name="email" id="email" type="email" class="demo-input-box login" placeholder="Enter Email">
 					</div>
 				</div>
 				<div class="field-column">
 					<div>
-						<br><label for="password">Password</label><span id="password_info"
+						<br><label style="color:#f0ad4e" for="password">Password</label><span id="password_info"
 							class="error-info"></span>
 					</div>
 					<div>
-						<input name="password" id="password" type="password" class="demo-input-box" placeholder="Enter Password">
+						<input style="font-family:Verdana, Geneva, Tahoma, sans-serif" name="password" id="password" type="password" class="demo-input-box login" placeholder="Enter Password">
 					</div>
 				</div>
 				<div class=field-column>
 					<div>
-						<br><input type="submit" name="login" value="Login" class="btn btn-primary">
+						<br><input type="submit" name="login" value="Login" class="btn btn-warning">
 					</div>
 				</div>
 				<div class="form-nav-row">
-				<br><a href="#" class="form-link">Forgot password?</a>
+				<br><a href="#" class="form-link text-warning" style="cursor:default">Forgot password?</a>
 				</div>
 				<div class="login-row form-nav-row">
 					<p>New user?</p>
-					<a href="/signup.php" class="btn form-link">Signup Now</a>
+					<a href="/signup.php" class="btn form-link text-dark"><u class="text-warning">Signup Here</u></a>
 				</div>
 				<!-- <div class="login-row form-nav-row">
 					<p>May also signup with</p>
@@ -80,7 +85,7 @@ height: 40px;
 				</div> -->
 			</div>
 </form>
-
+</div>
 <div id="hide"><a href="adminlogin.php" class="btn">a</a></div>
 		<?php include "footer.php"; ?>
 

@@ -1,5 +1,24 @@
-<?php 
-    include 'addtocart.php';
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Samples</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+	<?php include "header.php";
+    // session_start();
+    
+     include 'addtocart2.php';
     
     
     if ($_SESSION['status'] == 'invalid'){
@@ -22,29 +41,13 @@
         $sqlupdatedafterdel= "UPDATE cart SET total = '$newtotal' WHERE customer_email= '$emailforcart' AND status=1;";
         $resultupdateafterdel= mysqli_query($connection,$sqlupdatedafterdel);
         echo "<script>window.location.href='cart.php'</script>";
-
+        
     }
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Samples</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
-rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-	
-    <link rel="stylesheet" href="home.css" />
-    <link rel="stylesheet" href="cart.css">
-</head>
-<body>
-	<?php include "header.php"; ?>
     <div class="cart-container">
     <div class="cart-innercontainer">
-        <h2 class="text-center font-weight-bold" >CART</h2>
+        <h2 class="text-center font-weight-bold text-warning" >CART</h2>
         <table class="table">
             <thead>
                 <tr>
@@ -84,15 +87,18 @@ rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxj
                 <td></td>
                 <td></td>
                 <td>TOTAL</td>
-                <td class="text-warning"><h3 style="text-align:right"  class="text-primary">&#8369;<?php while($row03=mysqli_fetch_array($result03)){
+                <td class="text-warning"><h3 style="text-align:right"  class="text-danger">&#8369;<?php while($row03=mysqli_fetch_array($result03)){
                         echo $row03['total'];
                      } ?>.00</h3></td> 
             </tr>
             </tfoot>
         </table>
                     <div class="checkout">
-                        <form action="">
-                            <input type="submit" name='checkout' value='CHECKOUT'>
+                        <?php include 'checkout.php';?>
+                        <form action="/cart.php" method="POST">
+                            <input class="btn btn-warning" type="submit" name='checkout' value='CHECKOUT'>
+                            <input type="hidden" name='emailCO' value="<?php echo $emailcheckout ?>">
+                            
                         </form>
                     </div> 
     </div>

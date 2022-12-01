@@ -2,7 +2,7 @@
 
     require 'connection.php'; 
     require 'retrieveShop.php';
-    echo $sql4;
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +24,7 @@
 <body>
 <?php include "header.php" ?>
 <div class="viewItem-container">
-    <h1>Item Details</h1>
+    <h1 class="text-warning">Item Details</h1>
     <div class='viewItem-innercontainer'>
         <div class='viewItem-innercontainer-left'>
             <img src="<?php echo $row4['image'] ?>" style='width:100%; max-height: 75%;'>
@@ -37,16 +37,16 @@
             <h5 class='ms-5'>Console: <?php echo $row4['console_name'] ?></h5>
             <h5 class='ms-5'>Type: <?php echo $row4['type_name'] ?></h4>
             
-            <h3>item limit per purchase:<span id='stock'>5</span></h3>
+            <h3>Available in stock:<span id='stock'><?php echo $row4['quantity']?></span></h3>
 
             
-            <form   action="addtocart.php" method='post'>
+            <form   action="/addtocart2.php" method='post'>
             <h3>Quantity:
             <button id='qtyUp' type="button"><i class="bi bi-caret-up-fill"></i></button> 
             <input style="display:inline-block;width:50px; border:none;text-align:center;background:transparent" type="text" name="qty" id="qty" value="1" >   
             <button id="qtyDown" type="button"><i class="bi bi-caret-down-fill"></i></button></h3>
                 <input type="hidden" name='product_id' value='<?php echo $row4['product_id'] ?>'>
-                <button class='btn btn-primary' type='submit' name='addtocart'>Add to Cart</button>
+                <button class='btn btn-warning' type='submit' name='addtocart' id='addtocart'>Add to Cart</button>
             </form>
             
         </div>    
@@ -65,7 +65,7 @@
         const qty = document.getElementById('qty');
         const qtyDown =document.getElementById('qtyDown');
         const stock =document.getElementById('stock');
-        
+        const addtocart=document.getElementById('addtocart');
         let maxPurchase = parseInt(stock.textContent);
 
         let varQty = 1;
@@ -85,6 +85,9 @@
            }
             
         })
+        if(maxPurchase == 0){
+            addtocart.style.disabled = true;
+        }
 
         
     </script>  

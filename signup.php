@@ -16,31 +16,31 @@
                 <!--Names-->
                 <div class="row">
                     <div class="col-6">
-                        <label for="first_name">First Name</label>
+                        <label class="text-warning" for="first_name">First Name</label>
                         <input type="text" name="first_name" id="first_name" class="form-control">
                     </div>
                     <div class="col-6">
-                        <label for="last_name">Last Name</label>
+                        <label class="text-warning" for="last_name">Last Name</label>
                         <input type="text" name="last_name" id="last_name" class="form-control">
                     </div>
                     <span id="fnamerr"></span>
                 </div>
                 <!--Email-->
                 <div>
-                    <label for="email">Email Address</label>
+                    <label class="text-warning" for="email">Email Address</label>
                     <input type="email" name="email" id="email" class="form-control">
                     <span id="emailerr"></span>
                 </div>
                 <div class="row">
                     <!--Password-->
                     <div class="col-6">
-                        <label for="password">Password</label>
+                        <label class="text-warning" for="password">Password</label>
                         <input type="password" name="password" id="password" class="form-control">
                         <span id="passerr"></span>
                     </div>
                     <!--Confirm Password-->
                     <div class="col-6">
-                        <label for="con_password">Confirm Password</label>
+                        <label class="text-warning" for="con_password">Confirm Password</label>
                         <input type="password" name="con_password" id="con_password" class="form-control">
                         <span id="cpasserr"></span>
                     </div>
@@ -49,7 +49,7 @@
                 
                 <!--Country-->
                 <div>
-                    <label for="country">Region</label>
+                    <label class="text-warning" for="country">Region</label>
                     <select name="country" id="country" class="form-control">
                         <option value="" disabled selected hidden>Select Your Region</option>
                         <option value="car">CORDILLERA ADMINISTRATIVE REGION</option>
@@ -73,34 +73,34 @@
                 </div>
                 <!--Address-->
                 <div>
-                    <label for="address">Address</label>
+                    <label  class="text-warning" for="address">Address</label>
                     <input type="text" name="address" id="address" class="form-control">
                     <span id="adderr"></span>
                 </div>
                 <div>
-                    <label for="city">City / Town</label>
+                    <label class="text-warning" for="city">City / Town</label>
                     <input type="text" name="city" id="city" class="form-control">
                     <span id="cityerr"></span>
                 </div>
                 <div>
-                    <label for="state">Province</label>
+                    <label class="text-warning" for="state">Province</label>
                     <input type="text" name="state" id="state" class="form-control">
                     <span id="staterr"></span>
                 </div>
                 <div>
-                    <label for="zipcode">Zip code</label>
+                    <label class="text-warning" for="zipcode">Zip code</label>
                     <input type="number" name="zipcode" id="zipcode" class="form-control">
                     <span id="ziperr"></span>
                 </div>
                 <!--Phone Number-->
                 <div>
-                    <label for="number">Phone Number</label>
+                    <label class="text-warning" for="number">Phone Number</label>
                     <input type="text" name="number" id="number" class="form-control">
                     <span id="numerr"></span>
                 </div>
 
                 <br>
-                <input type="submit" value="Create Account" name="createbtn" class="btn btn-primary">
+                <input type="submit" value="Create Account" name="createbtn" class="btn btn-warning">
             </form>
         </div>
 

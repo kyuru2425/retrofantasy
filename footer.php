@@ -13,10 +13,10 @@
         <div class="social-media-footer">
           <h3>Our Social Media</h3>
           <ul>
-            <li><i class="bi bi-facebook"></i></li>
-            <li><i class="bi bi-twitter"></i></li>
-            <li><i class="bi bi-instagram"></i></li>
-            <li><i class="bi bi-youtube"></i></li>
+            <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+            <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+            <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+            <li><a href="#"><i class="bi bi-youtube"></i></a></li>
           </ul>
         </div>
         <div class="contacts-footer">

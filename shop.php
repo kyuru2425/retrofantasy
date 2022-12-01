@@ -73,6 +73,7 @@
         </li>
       </ul>
     </div>
+    <!-- /////////type nav///////// -->
     <div class="console-container" id="console-container">
       <div class="console" id="console">
         <?php 
@@ -88,22 +89,23 @@
           }
         ?>
         <ul class="console-tabs">
-          <li>
-          <a href="?<?php echo $parameter1; ?>">
-            <p class="console-name"><?php echo $console ?></p>
-            <p>System</p>
+          <li class="type">
+          <a style="text-decoration:none" href="?<?php echo $parameter1; ?>">
+            <p class="console-name" ><?php echo $console ?></p>
+            <p  class="console-name">System</p>
           </a>
           </li>
-          <li>
-          <a href="?<?php echo $parameter2; ?>">
+          <li class="type" >
+          <a  style="text-decoration:none" href="?<?php echo $parameter2; ?>">
             <p class="console-name"><?php echo $console ?></p>
-            <p>Games</p> 
+            <p class="console-name">Games</p> 
           </a>
           </li>
-          <li>
-          <a href="?<?php echo $parameter3; ?>">
+          <li class="type">
+
+          <a  style="text-decoration:none" href="?<?php echo $parameter3; ?>">
             <p class="console-name"><?php echo $console ?></p>
-            <p>Accesories</p>
+            <p class="console-name">Accesories</p>
           </a> 
           </li>
         </ul>
@@ -112,26 +114,33 @@
 <!--////////////////////////////////////items displayed///////////////////////////////////////////////////-->   
 
 <div class="shop-list">
-    
+          
     <?php
     
       while($row123 = mysqli_fetch_assoc($result)){?>
       
-                 <div class="shop-cards" style="height:35vh">
-
-                <div style="width:100%;height: 70%; background-color:gray;display:flex;justify-content:center ">
-                  <img src="<?php echo $row123['image']; ?>" style='height:100%; max-width: 100%'>
+                 <div class="shop-cards" style="position:relative" >
+                  <div style="background-color:#f0ad4e;margin:none;padding:none;border-radius:10px 10px 0 0;width:100%;height:5%"> </div>
+                <div style="width:100%;height: 60%;display:flex;justify-content:center ">
+                  <img src="<?php echo $row123['image']; ?>" style='max-height:100%; max-width: 100%'>
                 </div>
-                  <p><?php echo $row123['product_id']; ?></p> 
+                  
                   <p><?php echo $row123['product_name']; ?></p>
                   <p>&#8369; <?php echo $row123['price']; ?>.00</p>
                   <!--  name='edit' >View</button> -->
-                  <form  action="viewItem.php" method='POST'>
-                 <button class="view" value="view"  type='submit' name="view"  >View</button>
+                  <br/>
+                  <form  action="viewItem.php" method='POST' style="display:flex;justify-content:center">
+                 <button class="view" value="view"  type='submit' name="view" style="cursor:pointer;background-color:#f0ad4e;padding:10px;border-radius:10px; border:none; box-shadow:0 0 10px;color:black;" >View Item</button>
                  
                  <input type="hidden" name='product_name' 
                             value= '<?php echo $row123['product_name']; ?>'>
-                  </form> 
+                  </form>
+                  <br/>
+                  
+                  <span style="border-left: 5px solid  #f0ad4e;position:absolute;bottom:0;left:2%"><?php echo $row123['console_name']; ?></span>
+
+                 
+
                  </div>
          
          <?php } ?>
@@ -161,7 +170,7 @@
           $previouspage="page=".$previous_page;
           }
         ?>
-       <a class="page"style="color:white; text-decoration:none;border:1px solid white;margin:2px;padding:2px;width:27px;text-align:center;display:<?php echo ($page<=1)?'none':'inline-block';?> " href="shop.php?<?php echo $previouspage ?>"><< </a>
+       <a class="page"style="color:white; text-decoration:none;border:1px solid white;margin:2px;padding:2px;width:35px;text-align:center;display:<?php echo ($page<=1)?'none':'inline-block';?> " href="shop.php?<?php echo $previouspage ?>"><< </a>
 
         <?php
         $bcolor = '';
@@ -173,7 +182,7 @@
         for ($i = 1; $i <= $total_pages;$i++){
 
           if ($page == $i){
-            $color= 'background-color:bisque';
+            $color= 'background-color:#f0ad4e';
             $textcolor="black";
           }else{
             $color = '';
@@ -203,13 +212,13 @@
             }
           
 
-          echo '<a class="page" style="color:'.$textcolor.'; text-decoration:none;border:1px solid white;margin:2px;padding:2px;width:27px;text-align:center;'.$color.'" href="shop.php?'.$param.'">' .$i .'</a>';
+          echo '<a class="page" style="color:'.$textcolor.'; text-decoration:none;border:1px solid white;margin:2px;padding:2px;width:35px;text-align:center;'.$color.'" href="shop.php?'.$param.'">' .$i .'</a>';
         }
         ?>
       <a class='page' style="color:white; text-decoration:none;border:1px solid white;margin:2px;padding:2px;width:27px;text-align:center;display:<?php echo ($page>=$total_pages)?'none':'inline-block';?> " href="shop.php?<?php echo $nextpage ?>">>> </a>
         </div>
-        <div style='color:aqua'>
-          <strong >Page <?= $page; ?> of <?= $total_pages; ?></strong>
+        <div style="display:flex;justify-content:center">
+          <strong style="color:#f0ad4e">Page <?= $page; ?> of <?= $total_pages; ?></strong>
         </div>
     <?php include "footer.php" ?>
 <!--//////////////////////////Javascript///////////////////////////////////////////////-->

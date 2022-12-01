@@ -41,7 +41,8 @@
             $user = mysqli_fetch_array($result1);
             $fullname = $user['first_name']." ".$user['last_name']; 
         }else{
-            header("location: login.php");
+            echo "<script>alert('Log in account first');</script>";
+        echo "<script>window.location.href='login.php'</script>";
         }
         ?>
         
@@ -80,12 +81,36 @@
                         <tr>
                             <th>Cart ID</th>
                             <th>Date Transacted</th>
+                            <th>Image</th>
                             <th>Product</th>
-                            <th>Total</th>
+                            <th>Qty</th>
+                            <th>price</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <?php
+                        include 'checkout.php';
+                        $sqlhistory="SELECT * FROM cart INNER JOIN cart_details ON cart.cart_id = cart_details.cart_id INNER JOIN products ON cart_details.product_id = products.product_id WHERE customer_email= '$emailcheckout' AND status=0 ORDER BY cart.date_updated DESC LIMIT 0,10; ";
+                             $resulthistory=mysqli_query($connection,$sqlhistory);
+                    $counthistory=mysqli_num_rows($resulthistory);
+                         if($counthistory >0){       
+                        while($rowhistory = mysqli_fetch_array($resulthistory)){
+                            
+                                
+                                ?>
+                            <tr>
+                                
+                                    <td class="align-middle "><?php echo $rowhistory['cart_id']; ?></td>
+                                    <td class="align-middle "><?php echo $rowhistory['date_updated']?></td>
+                                    <td class="align-middle "><img src=<?php echo $rowhistory['image']?> style="height:50px;width:50px"></td>
+                                    <td class="align-middle "><?php echo $rowhistory['product_name']?></td>
+                                    <td class="align-middle "> <?php echo $rowhistory['quantity']?></td>
+                                    <td class="align-middle "><?php echo $rowhistory['price']*$rowhistory['quantity'] ?></td>
 
+                                
+                            </tr>
+                    
+                    <?php }} ?>
                     </tbody>
                 </table>
             </div>

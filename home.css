@@ -43,7 +43,7 @@ body {
   /* text-decoration: underline; */
   text-underline-offset: 10px;
   /* text-decoration-color: yellow; */
-  border-bottom: 4px solid #425050;
+  border-bottom: 4px solid #f0ad4e;
 }
 
 .logo > img {
@@ -89,6 +89,9 @@ body {
   width: 40%;
   color: black;
 }
+#home:focus {
+  border-bottom: 4px solid #f0ad4e;
+}
 /*//////////////////////////////LANDING PAGE//////////////////////////////////*/
 .landing-page {
   /* background-color: rgb(39, 39, 39); */
@@ -107,8 +110,9 @@ body {
 .shopNowButton {
   background-color: #f0ad4e;
   border: none;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 15px;
+
+  border-radius: 50%;
   box-shadow: 5px 5px 10px black;
 }
 .console-cards {
@@ -133,7 +137,7 @@ body {
 
 /*////////////////////////////////////SHOP PAGE//////////////////////////////////////////*/
 .brands {
-  background-color: black;
+  background-color: #f0ad4e;
 
   height: 100%;
   width: 100%;
@@ -182,12 +186,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: black;
 }
 .brands-tabs > li > div:hover {
   text-decoration: underline;
   text-underline-offset: 5px;
-  background-color: #425050;
+  background-color: white;
+  color: black;
 }
 .nintendo-list,
 .sega-list,
@@ -196,7 +201,7 @@ body {
   position: absolute;
   top: 100%;
   box-sizing: border-box;
-  background-color: #425050;
+  background-color: #f0ad4e;
   border-top: 5px solid black;
   z-index: 99;
 }
@@ -223,6 +228,7 @@ body {
   cursor: pointer;
   width: 100%;
   padding: 10px;
+  color: black;
 }
 .nintendo-list > li > a > div:hover,
 .sega-list > li > a > div:hover,
@@ -248,6 +254,7 @@ body {
   background-color: black;
   position: sticky;
   top: 18vh;
+  z-index: 10;
 }
 .console {
   background-color: black;
@@ -259,6 +266,32 @@ body {
   position: sticky;
   top: 18vh;
 }
+.console-name {
+  color: white;
+}
+.type {
+  height: 100%;
+  display: flex;
+  width: 120px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #f0ad4e; */
+
+  color: black;
+}
+.type * {
+  color: white;
+}
+.type:hover {
+  background-color: #f0ad4e;
+  color: black !important;
+}
+.type:hover p {
+  color: black;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 
 .console-tabs {
   display: flex;
@@ -269,23 +302,32 @@ body {
   width: 90%;
   text-align: center;
   color: white;
+  height: 100%;
+  align-items: center;
+}
+.console-tabs > ul > li {
+  height: 100%;
 }
 .shop-list {
   margin: 1vh 10vw;
   display: grid;
   gap: 10px;
-  background-color: #18181851;
+  background-color: rgba(45, 45, 45, 0.296);
   width: 80vw;
   padding: 5vh;
   grid-template-columns: repeat(auto-fill, 15vw);
   justify-content: center;
+  border-radius: 25px;
 }
 .shop-cards {
   width: 15vw;
-
+  min-height: 35vh;
   min-width: 200px;
-  background-color: aliceblue;
-  padding: 10px;
+  z-index: 0;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   border-radius: 10px;
   border: 1px solid black;
   box-shadow: 5px 5px 10px gray;
@@ -301,6 +343,9 @@ body {
 footer {
   border-top: 1px solid white;
   margin-top: 10vh;
+}
+footer * {
+  color: white;
 }
 .footer-container {
   margin: 2vh 5vw;
@@ -341,12 +386,53 @@ footer {
 
 /* //////////////////////////////pagination////////////////////*/
 .page:hover {
-  background-color: bisque;
+  background-color: #f0ad4e;
   color: black !important;
 }
 
 /* //////////////////////////////card in edit user////////////////////*/
-#editcard{
+#editcard {
   z-index: -1;
+}
 
+/* ///////////////////////////////////BOUNCE EFFECT/////////////////////////// */
+.animated {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+}
+
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }

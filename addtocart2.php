@@ -1,7 +1,8 @@
 <?php
     include "connection.php";
    
-    session_start();
+     if(!session_id()) session_start();
+
     
 
     
@@ -11,7 +12,10 @@
 $sqluser="SELECT * FROM cart WHERE customer_email='$emailforcart';";
 $resultuser=mysqli_query($connection, $sqluser);
 $rowuser =mysqli_num_rows($resultuser);
-
+// check if 0 ang status ni user
+$sqluser0="SELECT * FROM cart WHERE customer_email='$emailforcart' AND status= 1;";
+$resultuser0=mysqli_query($connection, $sqluser0);
+$rowuser0 =mysqli_num_rows($resultuser0);
 
   
     
@@ -20,7 +24,7 @@ $rowuser =mysqli_num_rows($resultuser);
         $product_id = $_POST['product_id'];
         $qty=$_POST['qty'];
         
-        if($rowuser == 0){
+        if($rowuser == 0 OR $rowuser0 == 0){
 
           $sql01="INSERT INTO cart (customer_email,status,total) VALUES('$emailforcart',1,0);";
           $result01=mysqli_query($connection, $sql01);
@@ -32,14 +36,19 @@ $rowuser =mysqli_num_rows($resultuser);
           $resultadd=$result01=mysqli_query($connection, $sqladd);
           
           
-        }else{
+        }
+        else
+        {
           
           $sql="SELECT * FROM cart WHERE customer_email='$emailforcart' AND status=1;";
           $result=mysqli_query($connection, $sql);
           $row =mysqli_fetch_array($result);
+          $rowcount=mysqli_num_rows($result);
+          if($rowcount >0){
           $cart_id=$row['cart_id'];
           $sqladd="INSERT INTO cart_details (product_id,cart_id,quantity) VALUES($product_id,$cart_id,$qty)";
           $resultadd=mysqli_query($connection, $sqladd);
+          }
 
         }
   // get the total price from cart  
@@ -55,7 +64,7 @@ $rowuser =mysqli_num_rows($resultuser);
         $resultupdate=mysqli_query($connection,$sqlupdate);
 
         echo "<script>alert('Successfully Added to cart');</script>";
-        // echo "<script>window.location.href='shop.php'</script>";
+        echo "<script>window.location.href='shop.php'</script>";
 
 
       }

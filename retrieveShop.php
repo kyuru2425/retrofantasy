@@ -76,7 +76,7 @@
     $result = mysqli_query($connection,$sql) OR trigger_error("failed sql".mysqli_error($connection),E_USER_ERROR);
     $result = mysqli_query($connection,$sql) OR trigger_error("failed sql".mysqli_error($connection),E_USER_ERROR);
     $resultpage = mysqli_query($connection,$sqlpage) OR trigger_error("failed sql".mysqli_error($connection),E_USER_ERROR);
-    //$rowpage = mysqli_fetch_array($result);
+    // $rowpage = mysqli_fetch_array($result);
     $total_records=mysqli_num_rows($resultpage);
     
     $total_pages = ceil($total_records/$items_per_page);
@@ -97,14 +97,6 @@
     // $start_from = ($page-1)*$items_per_page;
 
    
-    // $result = mysqli_query($connection,$sql) OR trigger_error("failed sql".mysqli_error($connection),E_USER_ERROR);
-    // $rowpage = mysqli_fetch_array($result);
-    // $where='console_name='.$rowpage['console_name'];
-    // $type='product_type_id='.$rowpage['product_type_id'];
-    // $sqlpage="SELECT * FROM products INNER JOIN consoles ON products.product_console_id = consoles.console_id WHERE $where && $type ;";
-    // $resultpage = mysqli_query($connection,$sqlpage) OR trigger_error("failed sql".mysqli_error($connection),E_USER_ERROR);
-    // $total_records=mysqli_num_rows($resultpage);
-    // $total_pages = ceil($total_records/$items_per_page);
     $previous_page = $page - 1;
     $next_page=$page + 1;
     
@@ -114,7 +106,7 @@
    
         if(isset($_POST['view'])){
         $productName = $_POST['product_name'];
-        $sql4="SELECT * FROM product_brands INNER JOIN consoles ON product_brands.brand_id = consoles.product_brand_id INNER JOIN products ON consoles.console_id = products.product_console_id INNER JOIN product_type ON products.product_type_id= product_type.type_id WHERE product_name = '$productName';";
+        $sql4="SELECT * FROM product_brands INNER JOIN consoles ON product_brands.brand_id = consoles.product_brand_id INNER JOIN products ON consoles.console_id = products.product_console_id INNER JOIN product_type ON products.product_type_id= product_type.type_id  INNER JOIN inventory ON products.product_id = inventory.product_id WHERE product_name = '$productName';";
         // $sql4 = "SELECT * FROM products WHERE product_name = '$productName'";
         $result4 = mysqli_query($connection,$sql4);
         $row4 = mysqli_fetch_assoc($result4);

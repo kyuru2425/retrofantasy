@@ -15,7 +15,7 @@ rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxj
 <body>
 	<?php include "header.php"; ?>
     <div>
-    <h2 class="text text-primary text-center">About Us</h2>
+    <h2 class="text text-warning text-center" ><u class="text text-warning text-center" >About Us</u></h2>
     <div>
     <br>
     <h5 class="text text-warning text-center">Retro Fantasy is not an Ordinary Online Store</h5>

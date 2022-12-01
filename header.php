@@ -6,29 +6,30 @@
             alt="retro-fantasy-logo"
           />
         </div>
-        <ul class="nav-tabs">
-          <li><a href="/index.php">HOME</a></li>
+        <ul class="nav-tabs" style="border:none">
+          <li><a href="/index.php" id="home" >HOME</a></li>
           <li><a href="/shop.php">SHOP</a></li>
           <li><a href="/aboutus.php">ABOUT US</a></li>
           <li><a href="/contactus.php">CONTACT US</a></li>
           <li><a href="/account.php">ACCOUNT</a></li>
         </ul>
         <ul class="nav-tabs-sub">
-          <li id="search-icon">
-            <a href="#"><i class="bi bi-search"></i></a>
-          </li>
+          
           <li><a href="/cart.php">CART</a></li>
           <?php
               
               session_start();
               if(empty($_SESSION['email'])){?>
               <li><a href="/login.php">LOG-IN</a></li>
-              <li><a href="/signup.php">SIGN-UP</a></li>
+              <li style=" background-color:#f0ad4e;margin:15px 0; padding:5px;border-radius:15px"><a href="/signup.php" style="color:black" >SIGN-UP</a></li>
           <?php }else{?>
-            <li><form action="/logout.php" method="post">
-            <input type="submit" value="Log out">
+            <li style=" background-color:red;margin:15px 0; padding:5px;border-radius:15px"><form action="/logout.php" method="post">
+            <input style="background:transparent;border:none;color:black"type="submit" value="Log out">
               </form></li>
-          <?php }?>
+             
+          <?php
+           
+          } ?>
             
         </ul>
       </nav>
