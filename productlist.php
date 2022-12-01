@@ -100,7 +100,28 @@
                     </thead>
                     <tbody>
                         <!-- for some reason it doesnt display the first row-->
-                                
+                        <tr>
+                                    <td><?php echo $row3['product_id'] ?></td>
+                                    <td><?php echo $row3['product_name'] ?></td>
+                                    <td><img src="<?php echo $row3['image'] ?>" alt="" style="width:50px;height:50px;"></td>
+                                    <td><?php echo $row3['console_name'] ?></td>
+                                    <td><?php echo $row3['type_name'] ?></td>
+                                    <td><?php echo $row3['price'] ?></td>
+                                    <td><?php echo $row3['quantity'] ?></td>
+                                    <td><?php echo $row3['discount_name'] ?></td>
+                                    <td>
+                                        <form action='update.php' method='post'> 
+                                            <input type='submit' value='Edit' name='edit' class='btn btn-secondary'>
+                                            <input type='hidden' name='prodid' value="<?php echo $row3['product_id'] ?>">
+                                        </form> 
+                                    </td>
+                                    <td>
+                                        <form action='delete.php' method='post'> 
+                                            <input type='submit' value='Delete' name='delete' class='btn btn-danger' onclick="return confirm('Are you sure you want to delete this product?')">
+                                            <input type='hidden' name='prodid' value="<?php echo $row3['product_id'] ?>">
+                                        </form> 
+                                    </td>
+                                </tr>       
                         <?php
                             while($row3 = mysqli_fetch_array($result3)){?>
                                 <tr>
@@ -120,7 +141,7 @@
                                     </td>
                                     <td>
                                         <form action='delete.php' method='post'> 
-                                            <input type='submit' value='Delete' name='delete' class='btn btn-danger'>
+                                            <input type='submit' value='Delete' name='delete' class='btn btn-danger' onclick="return confirm('Are you sure you want to delete this product?')">
                                             <input type='hidden' name='prodid' value="<?php echo $row3['product_id'] ?>">
                                         </form> 
                                     </td>
