@@ -6,7 +6,7 @@
   align-items: center;
 }
 .viewItem-innercontainer {
-  width: 60%;
+  max-width: 60%;
   background-color: aliceblue;
   min-height: 50vh;
   justify-content: space-around;
@@ -23,6 +23,8 @@
 }
 .viewItem-innercontainer-left > img {
   box-shadow: 5px 5px 10px 0;
+  max-width: 500px;
+  margin-right: 20px;
 }
 .viewItem-innercontainer-right {
   display: flex;
