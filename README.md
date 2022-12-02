@@ -1,4 +1,9 @@
 # Retro Fantasy Game Store
+## The Developers Who did this Project
+### Franco Gabriel Pacifico
+### John Harold T. Dela Cruz
+### Vergel Jose Brondial
+##
 ## The Site Language
 ### HTML, CSS, JavaScript, Bootstrap, PHP, amd MySql for the database
 ## The Homepage of the Site
